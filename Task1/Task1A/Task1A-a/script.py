@@ -74,27 +74,35 @@ def analyze_arena(input_image):
     cell_size = img_h // arena_size
 #divide arena into cell_size
     for i in range(arena_size):
-       for j in range(arena_size):
-        cell=image[i*cell_size:(i+1)*cell_size, j*cell_size:(j+1)*cell_size]
-        #convert cell to HSV
+     for j in range(arena_size):
+        cell = image[i*cell_size:(i+1)*cell_size, j*cell_size:(j+1)*cell_size]
+        
+      
         h, w = cell.shape[:2]
         center_patch = cell[int(h*0.25):int(h*0.75), int(w*0.25):int(w*0.75)]
-        hsv_cell=cv2.cvtColor(cell, cv2.COLOR_BGR2HSV)
-        #detect start cell
-        if np.any((hsv_cell[:,:, 0] >= 15) & (hsv_cell[:, :, 0] <= 35) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["start"] = f"{chr(65+j)}{arena_size+1}"
-            # detect goal cell
-        if np.any((hsv_cell[:, :, 0] >= 85) & (hsv_cell[:,arena_size:, 0] <= 100) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["goal"] = f"{chr(65+j)}{arena_size+1}"
-            # detect special cells
-        if np.any((hsv_cell[:, :, 0] >= 0) & (hsv_cell[:, :, 0] <= 10) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "DANGER"
-        elif np.any((hsv_cell[:, :, 0] >= 50) & (hsv_cell[:, :, 0] <= 70) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "SAFE"
-        elif np.any((hsv_cell[:, :, 0] >= 100) & (hsv_cell[:, :, 0] <= 130) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "REFUEL"
+        hsv_cell = cv2.cvtColor(center_patch, cv2.COLOR_BGR2HSV) 
+        
+       
+        row_coord = arena_size - i 
+        cell_label = f"{chr(65+j)}{row_coord}"
+        
+        # Detect start cell
+        if np.any((hsv_cell[:, :, 0] >= 21) & (hsv_cell[:, :, 0] <= 35) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+            result["start"] = cell_label
+            
+        # Detect goal cell 
+        if np.any((hsv_cell[:, :, 0] >= 85) & (hsv_cell[:, :, 0] <= 100) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+            result["goal"] = cell_label
+            
+        # Detect special cells
+        if np.any((hsv_cell[:, :, 0] >= 0) & (hsv_cell[:, :, 0] <= 9) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+            result["special_cells"][cell_label] = "DANGER"
+        elif np.any((hsv_cell[:, :, 0] >= 45) & (hsv_cell[:, :, 0] <= 75) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+            result["special_cells"][cell_label] = "SAFE"
+        elif np.any((hsv_cell[:, :, 0] >= 101) & (hsv_cell[:, :, 0] <= 135) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+            result["special_cells"][cell_label] = "REFUEL"
         elif np.any((hsv_cell[:, :, 0] >= 10) & (hsv_cell[:, :, 0] <= 20) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "SLOW"
+            result["special_cells"][cell_label] = "SLOW"
 
     # ==========================================
     # SORT SPECIAL CELLS

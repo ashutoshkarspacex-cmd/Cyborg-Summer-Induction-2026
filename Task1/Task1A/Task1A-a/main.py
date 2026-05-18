@@ -6,7 +6,7 @@ from script import analyze_arena
 # MAIN DRIVER FILE
 # ==========================================
 
-TEST_IMAGE = "Task1/Task1A/Task1A-a/Test_images/arena_1.png"
+TEST_IMAGE = "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task1/Task1A/Task1A-a/Test_images/arena_1.png"
 
 def main():
 
