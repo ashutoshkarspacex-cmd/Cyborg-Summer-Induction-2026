@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+from email.mime import image
+from unittest import result
+
 import cv2
 import numpy as np
 
@@ -61,38 +64,45 @@ def analyze_arena(input_image):
 
     # result["special_cells"]["B2"] = "DANGER"
     # result["special_cells"]["D5"] = "SAFE"
-    arena_size = image.shape[0]
+    img_h = image.shape[0]
+    arena_size = 8  # Fallback default
+    for size in [6, 8, 10, 12]:
+     if img_h % size == 0:
+        arena_size = size
+        break
     result["arena_size"] = arena_size
-
-    # divide arena into grid cells
+    cell_size = img_h // arena_size
+#divide arena into cell_size
     for i in range(arena_size):
-        for j in range(arena_size):
-            cell = image[i*arena_size:(i+1)*arena_size, j*arena_size:(j+1)*arena_size]
-            # convert cell to HSV
-            hsv_cell = cv2.cvtColor(cell, cv2.COLOR_BGR2HSV)
-            # detect start cell
-            if np.any((hsv_cell[:, :, 0] >= 15) & (hsv_cell[:, :, 0] <= 35) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["start"] = f"{chr(65+j)}{i+1}"
+       for j in range(arena_size):
+        cell=image[i*cell_size:(i+1)*cell_size, j*cell_size:(j+1)*cell_size]
+        #convert cell to HSV
+        h, w = cell.shape[:2]
+        center_patch = cell[int(h*0.25):int(h*0.75), int(w*0.25):int(w*0.75)]
+        hsv_cell=cv2.cvtColor(cell, cv2.COLOR_BGR2HSV)
+        #detect start cell
+        if np.any((hsv_cell[:,:, 0] >= 15) & (hsv_cell[:, :, 0] <= 35) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+                result["start"] = f"{chr(65+j)}{arena_size+1}"
             # detect goal cell
-            if np.any((hsv_cell[:, :, 0] >= 85) & (hsv_cell[:, :, 0] <= 100) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["goal"] = f"{chr(65+j)}{i+1}"
+        if np.any((hsv_cell[:, :, 0] >= 85) & (hsv_cell[:,arena_size:, 0] <= 100) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+                result["goal"] = f"{chr(65+j)}{arena_size+1}"
             # detect special cells
-            if np.any((hsv_cell[:, :, 0] >= 0) & (hsv_cell[:, :, 0] <= 10) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{i+1}"] = "DANGER"
-            elif np.any((hsv_cell[:, :, 0] >= 50) & (hsv_cell[:, :, 0] <= 70) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{i+1}"] = "SAFE"
-            elif np.any((hsv_cell[:, :, 0] >= 100) & (hsv_cell[:, :, 0] <= 130) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{i+1}"] = "REFUEL"
-            elif np.any((hsv_cell[:, :, 0] >= 10) & (hsv_cell[:, :, 0] <= 20) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-                result["special_cells"][f"{chr(65+j)}{i+1}"] = "SLOW"
+        if np.any((hsv_cell[:, :, 0] >= 0) & (hsv_cell[:, :, 0] <= 10) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "DANGER"
+        elif np.any((hsv_cell[:, :, 0] >= 50) & (hsv_cell[:, :, 0] <= 70) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "SAFE"
+        elif np.any((hsv_cell[:, :, 0] >= 100) & (hsv_cell[:, :, 0] <= 130) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "REFUEL"
+        elif np.any((hsv_cell[:, :, 0] >= 10) & (hsv_cell[:, :, 0] <= 20) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+                result["special_cells"][f"{chr(65+j)}{arena_size+1}"] = "SLOW"
 
     # ==========================================
     # SORT SPECIAL CELLS
     # ==========================================
+    # 
+    sorted_cells = dict( 
 
-    sorted_cells = dict(
-
-        sorted(
+    sorted(
 
             result["special_cells"].items(),
 
@@ -103,8 +113,7 @@ def analyze_arena(input_image):
 
             )
         )
-    )
-
+     ) 
     result["special_cells"] = sorted_cells
 
     # ==========================================
