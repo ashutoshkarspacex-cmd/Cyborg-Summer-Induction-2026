@@ -67,9 +67,27 @@ def analyze_arena(input_image):
     img_h = image.shape[0]
     arena_size = 8  # Fallback default
     for size in [6, 8, 10, 12]:
-     if img_h % size == 0:
-        arena_size = size
-        break
+        test_cell_size = img_h // size
+        found_start = False
+        found_goal = False
+        for i in range(size):
+            for j in range(size):
+                # Sample a tiny window at the center of the test cell
+                cy = int((i + 0.5) * test_cell_size)
+                cx = int((j + 0.5) * test_cell_size)
+                pixel_hsv = cv2.cvtColor(np.uint8([[image[cy, cx]]]), cv2.COLOR_BGR2HSV)[0][0]
+                h, s, v = pixel_hsv[0], pixel_hsv[1], pixel_hsv[2]
+                
+                if s >= 70 and v >= 70:
+                    if 21 <= h <= 35:   # Yellow Start
+                        found_start = True
+                    if 85 <= h <= 100:  # Cyan Goal
+                        found_goal = True
+                        
+                        
+            if found_start and found_goal:
+             arena_size = size
+             break
     result["arena_size"] = arena_size
     cell_size = img_h // arena_size
 #divide arena into cell_size
@@ -79,7 +97,7 @@ def analyze_arena(input_image):
         
       
         h, w = cell.shape[:2]
-        center_patch = cell[int(h*0.25):int(h*0.75), int(w*0.25):int(w*0.75)]
+        center_patch = cell[int(h*0.3):int(h*0.7), int(w*0.3):int(w*0.75)]
         hsv_cell = cv2.cvtColor(center_patch, cv2.COLOR_BGR2HSV) 
         
        
