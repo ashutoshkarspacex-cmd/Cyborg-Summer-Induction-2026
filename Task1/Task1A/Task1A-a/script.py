@@ -70,24 +70,33 @@ def analyze_arena(input_image):
         test_cell_size = img_h // size
         found_start = False
         found_goal = False
+        img_h = image.shape[0]
+    arena_size = 8  # Fallback default
+    
+    # Test which grid layout successfully lands on the Start & Goal landmarks
+    for size in [6, 8, 10, 12]:
+        test_size = img_h // size
+        found_start = False
+        found_goal = False
+        
         for i in range(size):
             for j in range(size):
-                # Sample a tiny window at the center of the test cell
-                cy = int((i + 0.5) * test_cell_size)
-                cx = int((j + 0.5) * test_cell_size)
-                pixel_hsv = cv2.cvtColor(np.uint8([[image[cy, cx]]]), cv2.COLOR_BGR2HSV)[0][0]
-                h, s, v = pixel_hsv[0], pixel_hsv[1], pixel_hsv[2]
+                y1, y2 = int(i*test_size + test_size*0.3), int(i*test_size + test_size*0.7)
+                x1, x2 = int(j*test_size + test_size*0.3), int(j*test_size + test_size*0.7)
+                test_patch = cv2.cvtColor(image[y1:y2, x1:x2], cv2.COLOR_BGR2HSV)
                 
-                if s >= 70 and v >= 70:
-                    if 21 <= h <= 35:   # Yellow Start
-                        found_start = True
-                    if 85 <= h <= 100:  # Cyan Goal
-                        found_goal = True
-                        
-                        
-            if found_start and found_goal:
-             arena_size = size
-             break
+                vibrant = (test_patch[:,:,1] >= 80) & (test_patch[:,:,2] >= 80)
+                min_p = test_patch.shape[0] * test_patch.shape[1] * 0.15
+                
+                if np.sum(vibrant & (test_patch[:,:,0] >= 21) & (test_patch[:,:,0] <= 35)) > min_p:
+                    found_start = True
+                if np.sum(vibrant & (test_patch[:,:,0] >= 85) & (test_patch[:,:,0] <= 100)) > min_p:
+                    found_goal = True
+                    
+        if found_start and found_goal:
+            arena_size = size
+            break
+            
     result["arena_size"] = arena_size
     cell_size = img_h // arena_size
 #divide arena into cell_size
