@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from email.mime import image
+
 from unittest import result
 
 import cv2
