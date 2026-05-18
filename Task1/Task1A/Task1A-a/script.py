@@ -104,32 +104,39 @@ def analyze_arena(input_image):
      for j in range(arena_size):
         cell = image[i*cell_size:(i+1)*cell_size, j*cell_size:(j+1)*cell_size]
         
-      
         h, w = cell.shape[:2]
-        center_patch = cell[int(h*0.3):int(h*0.7), int(w*0.3):int(w*0.75)]
+        center_patch = cell[int(h*0.3):int(h*0.7), int(w*0.3):int(w*0.7)]
         hsv_cell = cv2.cvtColor(center_patch, cv2.COLOR_BGR2HSV) 
         
-       
         row_coord = arena_size - i 
         cell_label = f"{chr(65+j)}{row_coord}"
         
-        # Detect start cell
-        if np.any((hsv_cell[:, :, 0] >= 21) & (hsv_cell[:, :, 0] <= 35) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+        H = hsv_cell[:, :, 0]
+        S = hsv_cell[:, :, 1]
+        V = hsv_cell[:, :, 2]
+        
+        # Ignores white background, black background, and black text lines
+        vibrant = (S >= 80) & (V >= 80)
+        min_pixels = hsv_cell.shape[0] * hsv_cell.shape[1] * 0.15  # 15% area threshold
+        
+        # Clean, non-overlapping color boundaries
+        if np.sum(vibrant & ((H >= 0) & (H <= 9) | (H >= 170))) > min_pixels:
+            result["special_cells"][cell_label] = "DANGER"
+            
+        elif np.sum(vibrant & (H >= 10) & (H <= 20)) > min_pixels:
+            result["special_cells"][cell_label] = "SLOW"
+            
+        elif np.sum(vibrant & (H >= 21) & (H <= 35)) > min_pixels:
             result["start"] = cell_label
             
-        # Detect goal cell 
-        if np.any((hsv_cell[:, :, 0] >= 85) & (hsv_cell[:, :, 0] <= 100) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+        elif np.sum(vibrant & (H >= 45) & (H <= 75)) > min_pixels:
+            result["special_cells"][cell_label] = "SAFE"
+            
+        elif np.sum(vibrant & (H >= 85) & (H <= 100)) > min_pixels:
             result["goal"] = cell_label
             
-        # Detect special cells
-        if np.any((hsv_cell[:, :, 0] >= 0) & (hsv_cell[:, :, 0] <= 9) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-            result["special_cells"][cell_label] = "DANGER"
-        elif np.any((hsv_cell[:, :, 0] >= 45) & (hsv_cell[:, :, 0] <= 75) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-            result["special_cells"][cell_label] = "SAFE"
-        elif np.any((hsv_cell[:, :, 0] >= 101) & (hsv_cell[:, :, 0] <= 135) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
+        elif np.sum(vibrant & (H >= 101) & (H <= 135)) > min_pixels:
             result["special_cells"][cell_label] = "REFUEL"
-        elif np.any((hsv_cell[:, :, 0] >= 10) & (hsv_cell[:, :, 0] <= 20) & (hsv_cell[:, :, 1] >= 100) & (hsv_cell[:, :, 2] >= 100)):
-            result["special_cells"][cell_label] = "SLOW"
 
     # ==========================================
     # SORT SPECIAL CELLS
