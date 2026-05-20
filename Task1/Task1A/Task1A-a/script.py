@@ -127,11 +127,15 @@ def analyze_arena(input_image):
 
             if not is_text:
              for label in ["DANGER","SAFE","REFUEL","SLOW"]:
+                pixel_hsv = hsv[cy, cx]
+                h_val, s_val, v_val = pixel_hsv
+                
+              
+                if s_val < 50 or v_val < 40 or v_val > 245:
+                    continue
                 lower=np.array(colour_ranges[label][0])
                 upper=np.array(colour_ranges[label][1])
-                match_mask = (pixel_hsv >= lower) & (pixel_hsv <= upper)
-
-                if np.any(np.all(match_mask, axis=-1)):
+                if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
                     cell_label=chr(65+j)+str(arena_size-k)
                     result["special_cells"][cell_label]=label
                     break
