@@ -69,7 +69,7 @@ def analyze_arena(input_image):
     # WRITE YOUR LOGIC BELOW
     # ==========================================
     h=image.shape[0]
-    current_size_matches=0
+    
     max_matches_found=-1
     best_size=8
 
@@ -78,13 +78,14 @@ def analyze_arena(input_image):
         "DANGER": ([0, 100, 100], [10, 255, 255]),       # Red
         "SAFE": ([50, 100, 100], [70, 255, 255]),       # Green
         "REFUEL": ([110, 100, 100], [130, 255, 255]),   # Blue
-        "SLOW": ([15, 100, 100], [35, 255, 255]),       # Orange
-        "START": ([20, 50, 100], [34, 255, 255]),      # Yellow
-        "GOAL": ([85, 50, 100], [95, 255, 255])        # Cyan
+        "SLOW": ([10, 100, 100], [25, 255, 255]),       # Orange
+        "START": ([26, 50, 100], [35, 255, 255]),      # Yellow
+        "GOAL": ([86, 50, 100], [95, 255, 255])        # Cyan
     }
     arena_size=8
 
     for i in [6,8,10,12]:
+        current_size_matches=0
         flag=False
         cell_size=h/i
         for k in range(i):
