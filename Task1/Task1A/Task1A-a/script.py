@@ -107,6 +107,7 @@ def analyze_arena(input_image):
     cell_size=h//arena_size
     for k in range(arena_size):
         for j in range(arena_size):
+            is_text=False
             cx= j*cell_size+cell_size//2
             cy= k*cell_size+cell_size//2
             pixel_hsv=hsv[max(0, cy-3):min(h, cy+3), max(0, cx-3):min(h, cx+3)]
