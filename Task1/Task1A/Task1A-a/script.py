@@ -79,6 +79,7 @@ def analyze_arena(input_image):
         "GOAL": ([85, 100, 100], [95, 255, 255])        # Cyan
     }
     arena_size=8
+    is_text=False
     for i in [6,8,10,12]:
         flag=False
         cell_size=h//i
