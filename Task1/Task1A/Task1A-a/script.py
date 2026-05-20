@@ -68,6 +68,19 @@ def analyze_arena(input_image):
     # ==========================================
     # WRITE YOUR LOGIC BELOW
     # ==========================================
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    _, thresh = cv2.threshold(gray, 40, 255, cv2.THRESH_BINARY)
+    row_sums = np.sum(thresh, axis=1)
+    col_sums = np.sum(thresh, axis=0)
+    cutoff = thresh.max() * 0.3
+    top    = int(np.argmax(row_sums > cutoff))
+    left   = int(np.argmax(col_sums > cutoff))
+    bottom = len(row_sums) - int(np.argmax(row_sums[::-1] > cutoff)) - 1
+    right  = len(col_sums) - int(np.argmax(col_sums[::-1] > cutoff)) - 1
+    
+    ax, ay = left, top
+    aw = right - left
+    ah = bottom - top
     h=image.shape[0]
     
     max_matches_found=-1
@@ -82,66 +95,70 @@ def analyze_arena(input_image):
         "START": ([26, 50, 100], [35, 255, 255]),      # Yellow
         "GOAL": ([86, 50, 100], [95, 255, 255])        # Cyan
     }
+    def count_color(roi_hsv, label):
+        mask = np.zeros(roi_hsv.shape[:2], dtype=np.uint8)
+        for lo, hi in colour_ranges[label]:
+            mask |= cv2.inRange(roi_hsv, np.array(lo), np.array(hi))
+        return int(np.count_nonzero(mask))
     arena_size=8
 
-    for i in [6,8,10,12]:
-        current_size_matches=0
-        flag=False
-        cell_size=h/i
-        for k in range(i):
-            for j in range(i):
-                cx= int(j*cell_size+cell_size/2)
-                cy= int(k*cell_size+cell_size/2)
-                pixel_hsv=hsv[max(0, cy-3):min(h, cy+3), max(0, cx-3):min(h, cx+3)]
-                for label in ["START","GOAL"]:
-                    lower=np.array(colour_ranges[label][0])
-                    upper=np.array(colour_ranges[label][1])
-                    match_mask = (pixel_hsv >= lower) & (pixel_hsv <= upper)
-                    if np.any(np.all(match_mask, axis=-1)):
-                      current_size_matches += 1
-                      break 
-                        
-       
-        if current_size_matches > max_matches_found:
-            max_matches_found = current_size_matches
-            best_size = i
-
-    arena_size = best_size
-    result["arena_size"] = arena_size
+    for size in [6,8,10,12]:
+        cs = aw / size          
+        starts = 0
+        goals  = 0
+        for r in range(size):
+            for c in range(size):
+                cy1, cy2 = int(ay + r * cs), int(ay + (r + 1) * cs)
+                cx1, cx2 = int(ax + c * cs), int(ax + (c + 1) * cs)
+                cell_roi = hsv[cy1:cy2, cx1:cx2]
+                
+                if cell_roi.size == 0:
+                    continue
+                if count_color(cell_roi, "START") > 15:
+                    starts += 1
+                if count_color(cell_roi, "GOAL") > 15:
+                    goals += 1
+                    
         
-    cell_size=h/arena_size
-    for k in range(arena_size):
-        for j in range(arena_size):
-            is_text=False
-            cx= int(j*cell_size+cell_size/2)
-            cy= int(k*cell_size+cell_size/2)
-            pixel_hsv=hsv[max(0, cy-6):min(h, cy+3), max(0, cx-6):min(h, cx+3)]
-            lower=np.array(colour_ranges["START"][0])
-            upper=np.array(colour_ranges["START"][1])
-            match_mask = (pixel_hsv >= lower) & (pixel_hsv <= upper)
-            if np.any(np.all(match_mask, axis=-1)):
-                result["start"]=chr(65+j)+str(arena_size-k)
-                is_text=True
-            lower=np.array(colour_ranges["GOAL"][0])
-            upper=np.array(colour_ranges["GOAL"][1])
-            match_mask = (pixel_hsv >= lower) & (pixel_hsv <= upper)
-            if np.any(np.all(match_mask, axis=-1)):
-                result["goal"]=chr(65+j)+str(arena_size-k)
-                is_text=True
-
-
-            if not is_text:
-             for label in ["DANGER","SAFE","REFUEL","SLOW"]:
-                pixel_hsv = hsv[cy, cx]
-                h_val, s_val, v_val = pixel_hsv
+        if starts == 1 and goals == 1:
+            score = starts + goals
+            if score > best_score:
+                best_score = score
+                best_size  = size
+    arena_size = best_size
+    result["arena_size"] = arena_size 
+    cs = aw / arena_size
+    for r in range(arena_size):
+        for c in range(arena_size):
+          cy1, cy2 = int(ay + r * cs), int(ay + (r + 1) * cs)
+          cx1, cx2 = int(ax + c * cs), int(ax + (c + 1) * cs)
+          cell_roi = hsv[cy1:cy2, cx1:cx2]
             
-                lower=np.array(colour_ranges[label][0])
-                upper=np.array(colour_ranges[label][1])
-                if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
-                    cell_label=chr(65+j)+str(arena_size-k)
-                    result["special_cells"][cell_label]=label
+        if cell_roi.size == 0:
+            continue
+                
+        
+            coord = chr(65 + c) + str(arena_size - r) 
+            
+          
+            if count_color(cell_roi, "START") > 15:
+                result["start"] = coord 
+                continue
+            if count_color(cell_roi, "GOAL") > 15:
+                result["goal"] = coord 
+                continue
+                
+          
+            cy = int(ay + r * cs + cs / 2)
+            cx = int(ax + c * cs + cs / 2)
+            d  = max(2, int(cs * 0.20))
+            center_roi = hsv[max(0, cy-d):min(gray.shape[0], cy+d), 
+                             max(0, cx-d):min(gray.shape[1], cx+d)]
+                             
+            for label in ["DANGER", "SAFE", "REFUEL", "SLOW"]: 
+             if count_color(center_roi, label) > 5:
+                    result["special_cells"][coord] = label 
                     break
-            
 
 
     # ==========================================
