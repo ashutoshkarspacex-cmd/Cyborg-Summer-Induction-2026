@@ -83,7 +83,7 @@ def analyze_arena(input_image):
         flag=False
         cell_size=h//i
         for k in range(i):
-            for j in range(j):
+            for j in range(k):
                 cx= j*cell_size+cell_size//2
                 cy= k*cell_size+cell_size//2
                 pixel_hsv=hsv[cy,cx]
