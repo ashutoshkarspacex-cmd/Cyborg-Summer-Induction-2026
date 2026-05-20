@@ -102,7 +102,7 @@ def analyze_arena(input_image):
         return int(np.count_nonzero(mask))
 
     # ------------------------------------------------------------------
-    # FIX 2: Arena size detection using strict validation flags [cite: 36, 37, 38, 39, 40]
+   
     # ------------------------------------------------------------------
     best_size = 8
     best_score = -1
@@ -124,39 +124,21 @@ def analyze_arena(input_image):
                 if count_color(cell_roi, "GOAL") > 15:
                     goals += 1
                     
-        # Must locate exactly 1 distinct start and 1 goal element [cite: 22]
+        
     if starts == 1 and goals == 1:
             score = starts + goals
             if score > best_score:
                 best_score = score
                 best_size  = size
 
-    # Fallback validation mode: execute background scan matching array structures
-    if best_score == -1:
-        fallback_best_score = -1
-        for size in [6, 8, 10, 12]:  
-         hits = 0
-         for r in range(size):
-                for c in range(size):
-                    cy1, cy2 = int(ay + r * cs), int(ay + (r + 1) * cs)
-                    cx1, cx2 = int(ax + c * cs), int(ax + (c + 1) * cs)
-                    cell_roi = hsv[cy1:cy2, cx1:cx2]
-                    
-                    for lbl in ["DANGER", "SAFE", "REFUEL", "SLOW"]: 
-                        if count_color(cell_roi, lbl) > 20:
-                            hits += 1
-                            break
-         if hits > fallback_best_score:
-                fallback_best_score = hits
-                best_size = size
+   
 
     arena_size = best_size
     result["arena_size"] = arena_size 
     cs = aw / arena_size
 
     # ------------------------------------------------------------------
-    # Final Matrix Grid Classification Pass
-    # ------------------------------------------------------------------
+   
     for r in range(arena_size):
         for c in range(arena_size):
             cy1, cy2 = int(ay + r * cs), int(ay + (r + 1) * cs)
