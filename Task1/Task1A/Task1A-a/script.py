@@ -110,7 +110,7 @@ def analyze_arena(input_image):
             is_text=False
             cx= j*cell_size+cell_size//2
             cy= k*cell_size+cell_size//2
-            pixel_hsv=hsv[max(0, cy-3):min(h, cy+3), max(0, cx-3):min(h, cx+3)]
+            pixel_hsv=hsv[max(0, cy-6):min(h, cy+3), max(0, cx-6):min(h, cx+3)]
             lower=np.array(colour_ranges["START"][0])
             upper=np.array(colour_ranges["START"][1])
             match_mask = (pixel_hsv >= lower) & (pixel_hsv <= upper)
