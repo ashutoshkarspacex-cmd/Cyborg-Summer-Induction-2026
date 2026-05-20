@@ -108,8 +108,8 @@ def analyze_arena(input_image):
     for k in range(arena_size):
         for j in range(arena_size):
             is_text=False
-            cx= j*cell_size+cell_size//2
-            cy= k*cell_size+cell_size//2
+            cx= int(j*cell_size+cell_size/2)
+            cy= int(k*cell_size+cell_size/2)
             pixel_hsv=hsv[max(0, cy-6):min(h, cy+3), max(0, cx-6):min(h, cx+3)]
             lower=np.array(colour_ranges["START"][0])
             upper=np.array(colour_ranges["START"][1])
