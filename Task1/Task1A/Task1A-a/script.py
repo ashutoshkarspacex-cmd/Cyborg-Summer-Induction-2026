@@ -83,8 +83,10 @@ def analyze_arena(input_image):
     ah = bottom - top
     h=image.shape[0]
     
-    max_matches_found=-1
-    best_size=8
+   
+    
+    best_size = 8
+    best_score = -1
 
     hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
 
