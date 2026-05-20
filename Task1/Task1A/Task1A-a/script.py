@@ -90,7 +90,7 @@ def analyze_arena(input_image):
                 for label in ["START","GOAL"]:
                     lower=np.array(colour_ranges[label][0])
                     upper=np.array(colour_ranges[label][1])
-                    if cv2.inRange(pixel_hsv,lower,upper):
+                    if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
                         arena_size=i
                         result["arena_size"]=arena_size
                         flag=True
@@ -110,17 +110,17 @@ def analyze_arena(input_image):
             for label in ["DANGER","SAFE","REFUEL","SLOW"]:
                 lower=np.array(colour_ranges[label][0])
                 upper=np.array(colour_ranges[label][1])
-                if cv2.inRange(pixel_hsv,lower,upper):
+                if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
                     cell_label=chr(65+j)+str(arena_size-k)
                     result["special_cells"][cell_label]=label
                     break
             lower=np.array(colour_ranges["START"][0])
             upper=np.array(colour_ranges["START"][1])
-            if cv2.inRange(pixel_hsv,lower,upper):
+            if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
                 result["start"]=chr(65+j)+str(arena_size-k)
             lower=np.array(colour_ranges["GOAL"][0])
             upper=np.array(colour_ranges["GOAL"][1])
-            if cv2.inRange(pixel_hsv,lower,upper):
+            if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
                 result["goal"]=chr(65+j)+str(arena_size-k)
 
 
