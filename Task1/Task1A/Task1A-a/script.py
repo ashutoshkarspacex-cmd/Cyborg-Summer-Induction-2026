@@ -70,8 +70,9 @@ def analyze_arena(input_image):
     # ==========================================
     h=image.shape[0]
     current_size_matches=0
-    max_matches_found=0
-    
+    max_matches_found=-1
+    best_size=8
+
     hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
     colour_ranges = {
         "DANGER": ([0, 100, 100], [10, 255, 255]),       # Red
