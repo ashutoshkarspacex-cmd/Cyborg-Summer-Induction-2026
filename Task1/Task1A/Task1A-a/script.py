@@ -82,11 +82,11 @@ def analyze_arena(input_image):
 
     for i in [6,8,10,12]:
         flag=False
-        cell_size=h//i
+        cell_size=h/i
         for k in range(i):
             for j in range(i):
-                cx= j*cell_size+cell_size//2
-                cy= k*cell_size+cell_size//2
+                cx= j*cell_size+cell_size/2
+                cy= k*cell_size+cell_size/2
                 pixel_hsv=hsv[max(0, cy-3):min(h, cy+3), max(0, cx-3):min(h, cx+3)]
                 for label in ["START","GOAL"]:
                     lower=np.array(colour_ranges[label][0])
@@ -104,7 +104,7 @@ def analyze_arena(input_image):
         if flag:
             break
     result["arena_size"]=arena_size
-    cell_size=h//arena_size
+    cell_size=h/arena_size
     for k in range(arena_size):
         for j in range(arena_size):
             is_text=False
