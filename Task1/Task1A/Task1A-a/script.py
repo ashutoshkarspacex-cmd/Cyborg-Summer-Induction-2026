@@ -70,106 +70,137 @@ def analyze_arena(input_image):
     # ==========================================
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-    _, thresh = cv2.threshold(gray, 40, 255, cv2.THRESH_BINARY)
-    row_sums = np.sum(thresh, axis=1)
-    col_sums = np.sum(thresh, axis=0)
-    
-    cutoff = thresh.max() * 0.3
-    top    = int(np.argmax(row_sums > cutoff))
-    left   = int(np.argmax(col_sums > cutoff))
-    bottom = len(row_sums) - int(np.argmax(row_sums[::-1] > cutoff)) - 1
-    right  = len(col_sums) - int(np.argmax(col_sums[::-1] > cutoff)) - 1
-    
-    ax, ay = left, top
-    aw = right - left
-    ah = bottom - top
 
-    # Calibrated color profiles accommodating thin anti-aliased text lines
+    # 1. Isolate the main square arena grid border, ignoring outside annotations
+    _, border_thresh = cv2.threshold(gray, 40, 255, cv2.THRESH_BINARY)
+    outer_contours, _ = cv2.findContours(border_thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    if len(outer_contours) > 0:
+        largest_contour = max(outer_contours, key=cv2.contourArea)
+        ax, ay, aw, ah = cv2.boundingRect(largest_contour)
+    else:
+        ax, ay, aw, ah = 0, 0, image.shape[1], image.shape[0]
+
+    # Highly calibrated HSV thresholds for both solid blocks and thin text lines
     colour_ranges = {
-        "DANGER": [([0,   120, 80],  [10,  255, 255]),
-                   ([170, 120, 80],  [180, 255, 255])],   # Red [cite: 19]
-        "SAFE":   [([35,  80,  60],  [85,  255, 255])],   # Green [cite: 19]
-        "REFUEL": [([100, 80,  60],  [130, 255, 255])],   # Blue [cite: 19]
-        "SLOW":   [([11,  120, 80],  [25,  255, 255])],   # Orange [cite: 19]
-        "START":  [([20,  60,  60],  [35,  255, 255])],   # Yellow [cite: 19]
-        "GOAL":   [([80,  60,  60],  [100, 255, 255])],   # Cyan [cite: 21]
+        "DANGER": [([0, 120, 70], [10, 255, 255]), ([170, 120, 70], [180, 255, 255])], # Red
+        "SAFE":   [([35, 100, 60], [85, 255, 255])],                                   # Green
+        "REFUEL": [([100, 100, 60], [130, 255, 255])],                                  # Blue
+        "SLOW":   [([11, 120, 70], [24, 255, 255])],                                   # Orange
+        "START":  [([20, 50, 50], [35, 255, 255])],                                     # Yellow 'S'
+        "GOAL":   [([80, 50, 50], [100, 255, 255])]                                     # Cyan 'G'
     }
 
-    def count_color(roi_hsv, label):
-        mask = np.zeros(roi_hsv.shape[:2], dtype=np.uint8)
-        for lo, hi in colour_ranges[label]:
-            mask |= cv2.inRange(roi_hsv, np.array(lo), np.array(hi))
-        return int(np.count_nonzero(mask))
-
-    # ------------------------------------------------------------------
-   
-    # ------------------------------------------------------------------
-    best_size = 8
-    best_score = -1
-    
-    for size in [6, 8, 10, 12]: 
-      cs = aw / size          
-      starts = 0
-      goals  = 0
-      for r in range(size):
-            for c in range(size):
-                cy1, cy2 = int(ay + r * cs), int(ay + (r + 1) * cs)
-                cx1, cx2 = int(ax + c * cs), int(ax + (c + 1) * cs)
-                cell_roi = hsv[cy1:cy2, cx1:cx2]
-                
-                if cell_roi.size == 0:
-                    continue
-                if count_color(cell_roi, "START") > 15:
-                    starts += 1
-                if count_color(cell_roi, "GOAL") > 15:
-                    goals += 1
-                    
+    # Helper function to convert pixel centroids into Alphanumeric grid mappings
+    def pixel_to_grid_coordinate(cx, cy, arena_size):
+        # Determine cell size dynamically based on the current locked configuration size
+        cell_w = aw / arena_size
+        cell_h = ah / arena_size
         
-    if starts == 1 and goals == 1:
-            score = starts + goals
-            if score > best_score:
-                best_score = score
-                best_size  = size
+        # Calculate relative distance from the inner active arena grid origin
+        relative_x = cx - ax
+        relative_y = cy - ay
+        
+        col_idx = int(relative_x // cell_w)
+        row_idx = int(relative_y // cell_h)
+        
+        # Boundary constraints check
+        col_idx = max(0, min(arena_size - 1, col_idx))
+        row_idx = max(0, min(arena_size - 1, row_idx))
+        
+        col_letter = chr(65 + col_idx)               # 0 -> 'A', 1 -> 'B'
+        row_number = str(arena_size - row_idx)        # Flips orientation: row 0 is top
+        return f"{col_letter}{row_number}"
+
+    # 2. STEP 1: Determine Arena Size dynamically using Text Contours
+    # The true grid sizing configuration will perfectly map both START and GOAL elements
+    detected_markers = {}
+    
+    for label in ["START", "GOAL"]:
+        # Compile mask ranges
+        mask = np.zeros(hsv.shape[:2], dtype=np.uint8)
+        for lo, hi in colour_ranges[label]:
+            mask |= cv2.inRange(hsv, np.array(lo), np.array(hi))
+            
+        # Extract contours matching this specific layout identifier
+        contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        
+        valid_centroids = []
+        for c in contours:
+            if cv2.contourArea(c) > 8: # Lower floor constraint to drop noise artifacts
+                M = cv2.moments(c)
+                if M["m00"] != 0:
+                    cx = int(M["m10"] / M["m00"])
+                    cy = int(M["m01"] / M["m00"])
+                    # Ensure centroid lives inside the active grid area boundaries
+                    if ax <= cx <= (ax + aw) and ay <= cy <= (ay + ah):
+                        valid_centroids.append((cx, cy))
+                        
+        if len(valid_centroids) == 1:
+            detected_markers[label] = valid_centroids[0]
+
+    # Calculate optimal size match configuration based on text markers alignment
+    arena_size = 8  # Fallback default configuration structure
+    if len(detected_markers) == 2:
+        start_pt = detected_markers["START"]
+        goal_pt = detected_markers["GOAL"]
+        
+        # Test configurations to see which size places markers closest to true cell centers
+        best_size_error = float("inf")
+        for size in [6, 8, 10, 12]:
+            cell_w = aw / size
+            cell_h = ah / size
+            
+            total_error = 0
+            for pt in [start_pt, goal_pt]:
+                rx, ry = pt[0] - ax, pt[1] - ay
+                # Calculate absolute deviation from ideal center pixel layout points
+                ideal_cx = (int(rx // cell_w) + 0.5) * cell_w
+                ideal_cy = (int(ry // cell_h) + 0.5) * cell_h
+                total_error += abs(rx - ideal_cx) + abs(ry - ideal_cy)
+                
+            if total_error < best_size_error:
+                best_size_error = total_error
+                arena_size = size
+
+    result["arena_size"] = arena_size
+
+    # 3. STEP 2: Process text marker labels placement directly into results
+    if "START" in detected_markers:
+        pt = detected_markers["START"]
+        result["start"] = pixel_to_grid_coordinate(pt[0], pt[1], arena_size)
+    if "GOAL" in detected_markers:
+        pt = detected_markers["GOAL"]
+        result["goal"] = pixel_to_grid_coordinate(pt[0], pt[1], arena_size)
+
+    # 4. STEP 3: Map Environmental Special Cells using Contour Center Positions
+    for label in ["DANGER", "SAFE", "REFUEL", "SLOW"]:
+        mask = np.zeros(hsv.shape[:2], dtype=np.uint8)
+        for lo, hi in colour_ranges[label]:
+            mask |= cv2.inRange(hsv, np.array(lo), np.array(hi))
+            
+        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        
+        for c in contours:
+            # Solid blocks are larger than text elements, use a higher area validation floor
+            if cv2.contourArea(c) > 100:
+                M = cv2.moments(c)
+                if M["m00"] != 0:
+                    cx = int(M["m10"] / M["m00"])
+                    cy = int(M["m01"] / M["m00"])
+                    
+                    if ax <= cx <= (ax + aw) and ay <= cy <= (ay + ah):
+                        coord = pixel_to_grid_coordinate(cx, cy, arena_size)
+                        # Verify it isn't overwriting a text position cell layout
+                        if coord != result["start"] and coord != result["goal"]:
+                            result["special_cells"][coord] = label
+                    
+                   
+
+
+  
 
    
-
-    arena_size = best_size
-    result["arena_size"] = arena_size 
-    cs = aw / arena_size
-
-    # ------------------------------------------------------------------
-   
-    for r in range(arena_size):
-        for c in range(arena_size):
-            cy1, cy2 = int(ay + r * cs), int(ay + (r + 1) * cs)
-            cx1, cx2 = int(ax + c * cs), int(ax + (c + 1) * cs)
-            cell_roi = hsv[cy1:cy2, cx1:cx2]
-            
-            if cell_roi.size == 0:
-                continue
-                
-            # Compute Alphanumeric string map identifiers (e.g. A1, H8) [cite: 72]
-            coord = chr(65 + c) + str(arena_size - r) 
-            
-            # Target structural text layers explicitly inside the full boundaries [cite: 22, 68]
-            if count_color(cell_roi, "START") > 15:
-                result["start"] = coord 
-                continue
-            if count_color(cell_roi, "GOAL") > 15:
-                result["goal"] = coord 
-                
-            # For special navigation cells: target internal zones to avoid checker borders [cite: 68]
-            cy = int(ay + r * cs + cs / 2)
-            cx = int(ax + c * cs + cs / 2)
-            d  = max(2, int(cs * 0.20))
-            center_roi = hsv[max(0, cy-d):min(gray.shape[0], cy+d), 
-                             max(0, cx-d):min(gray.shape[1], cx+d)]
-                             
-            for label in ["DANGER", "SAFE", "REFUEL", "SLOW"]: 
-                if count_color(center_roi, label) > 5:
-                    result["special_cells"][coord] = label
-                    break
-
 
     # ==========================================
     # SORT SPECIAL CELLS
