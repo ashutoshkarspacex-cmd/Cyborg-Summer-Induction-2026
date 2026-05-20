@@ -135,7 +135,7 @@ def analyze_arena(input_image):
                     continue
                 lower=np.array(colour_ranges[label][0])
                 upper=np.array(colour_ranges[label][1])
-                if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
+                if np.any(pixel_hsv >= lower) and np.any(pixel_hsv <= upper):
                     cell_label=chr(65+j)+str(arena_size-k)
                     result["special_cells"][cell_label]=label
                     break
