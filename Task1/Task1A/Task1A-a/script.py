@@ -85,8 +85,8 @@ def analyze_arena(input_image):
         cell_size=h/i
         for k in range(i):
             for j in range(i):
-                cx= j*cell_size+cell_size/2
-                cy= k*cell_size+cell_size/2
+                cx= int(j*cell_size+cell_size/2)
+                cy= int(k*cell_size+cell_size/2)
                 pixel_hsv=hsv[max(0, cy-3):min(h, cy+3), max(0, cx-3):min(h, cx+3)]
                 for label in ["START","GOAL"]:
                     lower=np.array(colour_ranges[label][0])
