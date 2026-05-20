@@ -92,7 +92,7 @@ def analyze_arena(input_image):
                     upper=np.array(colour_ranges[label][1])
                     if np.all(pixel_hsv >= lower) and np.all(pixel_hsv <= upper):
                         arena_size=i
-                        result["arena_size"]=arena_size
+                        
                         flag=True
                         break
                 if flag:
@@ -101,6 +101,7 @@ def analyze_arena(input_image):
                 break
         if flag:
             break
+    result["arena_size"]=arena_size
     cell_size=h//arena_size
     for k in range(arena_size):
         for j in range(arena_size):
