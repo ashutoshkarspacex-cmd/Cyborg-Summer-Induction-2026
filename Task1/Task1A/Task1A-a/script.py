@@ -93,17 +93,17 @@ def analyze_arena(input_image):
                     upper=np.array(colour_ranges[label][1])
                     match_mask = (pixel_hsv >= lower) & (pixel_hsv <= upper)
                     if np.any(np.all(match_mask, axis=-1)):
-                        arena_size=i
+                      current_size_matches += 1
+                      break 
                         
-                        flag=True
-                        break
-                if flag:
-                    break
-            if flag:
-                break
-        if flag:
-            break
-    result["arena_size"]=arena_size
+       
+        if current_size_matches > max_matches_found:
+            max_matches_found = current_size_matches
+            best_size = i
+
+    arena_size = best_size
+    result["arena_size"] = arena_size
+        
     cell_size=h/arena_size
     for k in range(arena_size):
         for j in range(arena_size):
