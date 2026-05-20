@@ -75,11 +75,11 @@ def analyze_arena(input_image):
         "SAFE": ([50, 100, 100], [70, 255, 255]),       # Green
         "REFUEL": ([110, 100, 100], [130, 255, 255]),   # Blue
         "SLOW": ([15, 100, 100], [35, 255, 255]),       # Orange
-        "START": ([20, 100, 100], [34, 255, 255]),      # Yellow
-        "GOAL": ([85, 100, 100], [95, 255, 255])        # Cyan
+        "START": ([20, 50, 100], [34, 255, 255]),      # Yellow
+        "GOAL": ([85, 50, 100], [95, 255, 255])        # Cyan
     }
     arena_size=8
-    is_text=False
+
     for i in [6,8,10,12]:
         flag=False
         cell_size=h//i
