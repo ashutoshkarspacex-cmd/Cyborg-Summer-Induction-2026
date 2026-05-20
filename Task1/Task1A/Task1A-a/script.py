@@ -124,8 +124,8 @@ def analyze_arena(input_image):
                 is_text=True
 
 
-        if not is_text:
-            for label in ["DANGER","SAFE","REFUEL","SLOW"]:
+            if not is_text:
+             for label in ["DANGER","SAFE","REFUEL","SLOW"]:
                 lower=np.array(colour_ranges[label][0])
                 upper=np.array(colour_ranges[label][1])
                 match_mask = (pixel_hsv >= lower) & (pixel_hsv <= upper)
