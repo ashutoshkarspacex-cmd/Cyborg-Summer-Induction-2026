@@ -87,13 +87,18 @@ def analyze_arena(input_image):
     best_size=8
 
     hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+
     colour_ranges = {
-        "DANGER": ([0, 100, 100], [10, 255, 255]),       # Red
-        "SAFE": ([50, 100, 100], [70, 255, 255]),       # Green
-        "REFUEL": ([110, 100, 100], [130, 255, 255]),   # Blue
-        "SLOW": ([10, 100, 100], [25, 255, 255]),       # Orange
-        "START": ([26, 50, 100], [35, 255, 255]),      # Yellow
-        "GOAL": ([86, 50, 100], [95, 255, 255])        # Cyan
+        "DANGER": [
+            ([0, 120, 80], [10, 255, 255]),
+            ([170, 120, 80], [180, 255, 255])
+        ],   # Red 
+        
+        "SAFE":   [([35, 80, 60], [85, 255, 255])],   # Green 
+        "REFUEL": [([100, 80, 60], [130, 255, 255])],  # Blue 
+        "SLOW":   [([11, 120, 80], [25, 255, 255])],   # Orange 
+        "START":  [([20, 60, 60], [35, 255, 255])],   # Yellow 
+        "GOAL":   [([80, 60, 60], [100, 255, 255])]   # Cyan 
     }
     def count_color(roi_hsv, label):
         mask = np.zeros(roi_hsv.shape[:2], dtype=np.uint8)
