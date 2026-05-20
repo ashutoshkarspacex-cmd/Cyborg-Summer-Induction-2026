@@ -86,7 +86,7 @@ def analyze_arena(input_image):
             for j in range(k):
                 cx= j*cell_size+cell_size//2
                 cy= k*cell_size+cell_size//2
-                pixel_hsv=hsv[max(0, cy-4):min(h, cy+5), max(0, cx-4):min(h, cx+5)]
+                pixel_hsv=hsv[max(0, cy-3):min(h, cy+3), max(0, cx-3):min(h, cx+3)]
                 for label in ["START","GOAL"]:
                     lower=np.array(colour_ranges[label][0])
                     upper=np.array(colour_ranges[label][1])
@@ -107,7 +107,7 @@ def analyze_arena(input_image):
         for j in range(arena_size):
             cx= j*cell_size+cell_size//2
             cy= k*cell_size+cell_size//2
-            pixel_hsv=hsv[max(0, cy-4):min(h, cy+5), max(0, cx-4):min(h, cx+5)]
+            pixel_hsv=hsv[max(0, cy-3):min(h, cy+3), max(0, cx-3):min(h, cx+3)]
             for label in ["DANGER","SAFE","REFUEL","SLOW"]:
                 lower=np.array(colour_ranges[label][0])
                 upper=np.array(colour_ranges[label][1])
