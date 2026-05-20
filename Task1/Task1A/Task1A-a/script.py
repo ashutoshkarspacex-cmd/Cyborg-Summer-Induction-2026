@@ -142,7 +142,7 @@ def analyze_arena(input_image):
         goal_pt = detected_markers["GOAL"]
         
 
-        least_error = 0.0
+        least_error = float('inf')
         for size in [6, 8, 10, 12]:
             cell_w = aw / size
             cell_h = ah / size
