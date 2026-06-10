@@ -1,0 +1,282 @@
+[0.000000] (-) TimerEvent: {}
+[0.000185] (task3) JobQueued: {'identifier': 'task3', 'dependencies': OrderedDict()}
+[0.000408] (task3) JobStarted: {'identifier': 'task3'}
+[0.006178] (task3) JobProgress: {'identifier': 'task3', 'progress': 'cmake'}
+[0.006401] (task3) Command: {'cmd': ['/usr/bin/cmake', '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3', '-DCMAKE_INSTALL_PREFIX=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3'], 'cwd': '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'the_wizard_of_nowhere'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/the_wizard_of_nowhere'), ('OLDPWD', '/home/the_wizard_of_nowhere'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1916'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'the_wizard_of_nowhere'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'the_wizard_of_nowhere'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/the_wizard_of_nowhere/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/the-wizard-of-nowhere-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:@/tmp/.ICE-unix/1887,unix/the-wizard-of-nowhere-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:/tmp/.ICE-unix/1887'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/822c6d5e_7c47_4d75_b8d6_a45e804b2fce'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.HB0IQ3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.443'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/the_wizard_of_nowhere/cyborg_task_3/build/robot_controller:/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller:/opt/ros/humble')]), 'shell': False}
+[0.085111] (task3) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099917] (-) TimerEvent: {}
+[0.145506] (task3) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.153341] (task3) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200018] (task3) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.200147] (-) TimerEvent: {}
+[0.204904] (task3) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.205948] (task3) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.206369] (task3) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.208912] (task3) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.261722] (task3) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.266571] (task3) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.266711] (task3) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.267049] (task3) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.274471] (task3) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.300235] (-) TimerEvent: {}
+[0.373252] (task3) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.400396] (-) TimerEvent: {}
+[0.443792] (task3) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.447399] (task3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.453848] (task3) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.490369] (task3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500496] (-) TimerEvent: {}
+[0.600759] (-) TimerEvent: {}
+[0.682021] (task3) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.700932] (-) TimerEvent: {}
+[0.798474] (task3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.801011] (-) TimerEvent: {}
+[0.901244] (-) TimerEvent: {}
+[0.946456] (task3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.961148] (task3) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[0.962733] (task3) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.981546] (task3) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[0.981787] (task3) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.981912] (task3) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.981994] (task3) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[0.999187] (task3) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.001318] (-) TimerEvent: {}
+[1.066048] (task3) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.083248] (task3) StdoutLine: {'line': b'-- Generating done\n'}
+[1.089947] (task3) StdoutLine: {'line': b'-- Build files have been written to: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3\n'}
+[1.095704] (task3) CommandEnded: {'returncode': 0}
+[1.096133] (task3) JobProgress: {'identifier': 'task3', 'progress': 'build'}
+[1.096666] (task3) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3', '--', '-j12', '-l12'], 'cwd': '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'the_wizard_of_nowhere'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/the_wizard_of_nowhere'), ('OLDPWD', '/home/the_wizard_of_nowhere'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1916'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'the_wizard_of_nowhere'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'the_wizard_of_nowhere'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/the_wizard_of_nowhere/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/the-wizard-of-nowhere-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:@/tmp/.ICE-unix/1887,unix/the-wizard-of-nowhere-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:/tmp/.ICE-unix/1887'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/822c6d5e_7c47_4d75_b8d6_a45e804b2fce'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.HB0IQ3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.443'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/the_wizard_of_nowhere/cyborg_task_3/build/robot_controller:/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller:/opt/ros/humble')]), 'shell': False}
+[1.101393] (-) TimerEvent: {}
+[1.122612] (task3) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.128908] (task3) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[1.129104] (task3) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.135088] (task3) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_copy_task3\n'}
+[1.201497] (-) TimerEvent: {}
+[1.295708] (task3) StdoutLine: {'line': b'running egg_info\n'}
+[1.296175] (task3) StdoutLine: {'line': b'creating task3.egg-info\n'}
+[1.296328] (task3) StdoutLine: {'line': b'writing task3.egg-info/PKG-INFO\n'}
+[1.296464] (task3) StdoutLine: {'line': b'writing dependency_links to task3.egg-info/dependency_links.txt\n'}
+[1.296562] (task3) StdoutLine: {'line': b'writing top-level names to task3.egg-info/top_level.txt\n'}
+[1.296706] (task3) StdoutLine: {'line': b"writing manifest file 'task3.egg-info/SOURCES.txt'\n"}
+[1.298275] (task3) StdoutLine: {'line': b"reading manifest file 'task3.egg-info/SOURCES.txt'\n"}
+[1.298676] (task3) StdoutLine: {'line': b"writing manifest file 'task3.egg-info/SOURCES.txt'\n"}
+[1.298801] (task3) StdoutLine: {'line': b'[  9%] Built target task3__rs\n'}
+[1.301585] (-) TimerEvent: {}
+[1.325547] (task3) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_build_task3_egg\n'}
+[1.337198] (task3) StdoutLine: {'line': b'[  9%] Built target task3__cpp\n'}
+[1.341520] (task3) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/task3__rosidl_generator_c.dir/rosidl_generator_c/task3/srv/detail/prime_factors__functions.c.o\x1b[0m\n'}
+[1.343748] (task3) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.343958] (task3) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.344023] (task3) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.391454] (task3) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libtask3__rosidl_generator_c.so\x1b[0m\n'}
+[1.401685] (-) TimerEvent: {}
+[1.416900] (task3) StdoutLine: {'line': b'[ 25%] Built target task3__rosidl_generator_c\n'}
+[1.423482] (task3) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.423677] (task3) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.423752] (task3) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.501807] (-) TimerEvent: {}
+[1.516564] (task3) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/task3/srv/prime_factors__type_support.cpp.o\x1b[0m\n'}
+[1.530247] (task3) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/task3/srv/detail/prime_factors__type_support.cpp.o\x1b[0m\n'}
+[1.542661] (task3) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/task3/srv/detail/dds_fastrtps/prime_factors__type_support.cpp.o\x1b[0m\n'}
+[1.601928] (-) TimerEvent: {}
+[1.622560] (task3) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/task3__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/task3/srv/detail/prime_factors__type_support.c.o\x1b[0m\n'}
+[1.626256] (task3) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/task3/srv/detail/prime_factors__type_support_c.cpp.o\x1b[0m\n'}
+[1.635767] (task3) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_c.dir/rosidl_typesupport_c/task3/srv/prime_factors__type_support.cpp.o\x1b[0m\n'}
+[1.648494] (task3) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking C shared library libtask3__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.659646] (task3) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libtask3__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.672003] (task3) StdoutLine: {'line': b'[ 59%] Built target task3__rosidl_typesupport_introspection_c\n'}
+[1.693956] (task3) StdoutLine: {'line': b'[ 59%] Built target task3__rosidl_typesupport_c\n'}
+[1.702095] (-) TimerEvent: {}
+[1.729541] (task3) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library libtask3__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.759018] (task3) StdoutLine: {'line': b'[ 62%] Built target task3__rosidl_typesupport_cpp\n'}
+[1.802173] (-) TimerEvent: {}
+[1.824428] (task3) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libtask3__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.830328] (task3) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libtask3__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.853294] (task3) StdoutLine: {'line': b'[ 68%] Built target task3__rosidl_typesupport_introspection_cpp\n'}
+[1.853575] (task3) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libtask3__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.886363] (task3) StdoutLine: {'line': b'[ 71%] Built target task3__rosidl_typesupport_fastrtps_cpp\n'}
+[1.902343] (-) TimerEvent: {}
+[1.906630] (task3) StdoutLine: {'line': b'[ 71%] Built target task3__rosidl_typesupport_fastrtps_c\n'}
+[1.919019] (task3) StdoutLine: {'line': b'[ 71%] Built target task3\n'}
+[1.931948] (task3) StdoutLine: {'line': b'[ 75%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.002440] (-) TimerEvent: {}
+[2.102741] (-) TimerEvent: {}
+[2.175159] (task3) StdoutLine: {'line': b'[ 75%] Built target task3__py\n'}
+[2.189257] (task3) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/task3__rosidl_generator_py.dir/rosidl_generator_py/task3/srv/_prime_factors_s.c.o\x1b[0m\n'}
+[2.202872] (-) TimerEvent: {}
+[2.273697] (task3) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/task3/libtask3__rosidl_generator_py.so\x1b[0m\n'}
+[2.300657] (task3) StdoutLine: {'line': b'[ 81%] Built target task3__rosidl_generator_py\n'}
+[2.302961] (-) TimerEvent: {}
+[2.313941] (task3) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/task3/_task3_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.314133] (task3) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/task3/_task3_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.314194] (task3) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/task3/_task3_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.374901] (task3) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.375057] (task3) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.376359] (task3) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.396669] (task3) StdoutLine: {'line': b'[100%] Built target task3__rosidl_typesupport_c__pyext\n'}
+[2.396819] (task3) StdoutLine: {'line': b'[100%] Built target task3__rosidl_typesupport_introspection_c__pyext\n'}
+[2.396965] (task3) StdoutLine: {'line': b'[100%] Built target task3__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.403050] (-) TimerEvent: {}
+[2.405154] (task3) CommandEnded: {'returncode': 0}
+[2.405707] (task3) JobProgress: {'identifier': 'task3', 'progress': 'install'}
+[2.411283] (task3) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3'], 'cwd': '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'the_wizard_of_nowhere'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/the_wizard_of_nowhere'), ('OLDPWD', '/home/the_wizard_of_nowhere'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1916'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'the_wizard_of_nowhere'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'the_wizard_of_nowhere'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/the_wizard_of_nowhere/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/the-wizard-of-nowhere-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:@/tmp/.ICE-unix/1887,unix/the-wizard-of-nowhere-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:/tmp/.ICE-unix/1887'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/822c6d5e_7c47_4d75_b8d6_a45e804b2fce'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.HB0IQ3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.443'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/the_wizard_of_nowhere/cyborg_task_3/build/robot_controller:/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/the_wizard_of_nowhere/cyborg_task_3/install/robot_controller:/opt/ros/humble')]), 'shell': False}
+[2.417221] (task3) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.417370] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/rosidl_interfaces/task3\n'}
+[2.417423] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3\n'}
+[2.417472] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv\n'}
+[2.417517] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail\n'}
+[2.417566] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.h\n'}
+[2.417614] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__functions.h\n'}
+[2.417659] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__struct.h\n'}
+[2.417708] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__functions.c\n'}
+[2.417760] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/prime_factors.h\n'}
+[2.417804] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg\n'}
+[2.417857] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.417978] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/library_path.sh\n'}
+[2.418041] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/library_path.dsv\n'}
+[2.418139] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_generator_c.so\n'}
+[2.418351] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_generator_c.so" to ""\n'}
+[2.418405] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3\n'}
+[2.418442] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv\n'}
+[2.418476] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail\n'}
+[2.418522] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_c.h\n'}
+[2.418578] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg\n'}
+[2.418612] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.418646] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_c.so\n'}
+[2.418748] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[2.418799] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3\n'}
+[2.418835] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv\n'}
+[2.418912] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail\n'}
+[2.418948] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.c\n'}
+[2.418982] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_introspection_c.h\n'}
+[2.419032] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg\n'}
+[2.419067] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.419114] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_c.so\n'}
+[2.419206] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_c.so" to ""\n'}
+[2.419247] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_c.so\n'}
+[2.419396] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_c.so" to ""\n'}
+[2.419436] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3\n'}
+[2.419480] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv\n'}
+[2.419531] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/prime_factors.hpp\n'}
+[2.419564] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail\n'}
+[2.419598] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__builder.hpp\n'}
+[2.419647] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__struct.hpp\n'}
+[2.419692] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.hpp\n'}
+[2.419725] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__traits.hpp\n'}
+[2.419774] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg\n'}
+[2.419808] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[2.419859] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3\n'}
+[2.419919] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv\n'}
+[2.419955] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail\n'}
+[2.419992] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.420041] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/dds_fastrtps\n'}
+[2.420075] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg\n'}
+[2.420109] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.420155] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.420230] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[2.420271] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3\n'}
+[2.420324] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv\n'}
+[2.420357] (task3) StdoutLine: {'line': b'-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail\n'}
+[2.420391] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.420434] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.cpp\n'}
+[2.420481] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_cpp.so\n'}
+[2.420611] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[2.420656] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_cpp.so\n'}
+[2.420803] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_cpp.so" to ""\n'}
+[2.420853] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/pythonpath.sh\n'}
+[2.420978] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/pythonpath.dsv\n'}
+[2.421038] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info\n'}
+[2.421127] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.421184] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.421242] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.421293] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.421364] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3\n'}
+[2.421410] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv\n'}
+[2.421456] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/__init__.py\n'}
+[2.421501] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/_prime_factors_s.c\n'}
+[2.421561] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/_prime_factors.py\n'}
+[2.421618] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/_task3_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.421682] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.421745] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/libtask3__rosidl_generator_py.so\n'}
+[2.421810] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.421901] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/_task3_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.421957] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/__init__.py\n'}
+[2.422008] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/_task3_s.ep.rosidl_typesupport_c.c\n'}
+[2.422072] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.447033] (task3) StdoutLine: {'line': b"Listing '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3'...\n"}
+[2.447161] (task3) StdoutLine: {'line': b"Compiling '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/__init__.py'...\n"}
+[2.447198] (task3) StdoutLine: {'line': b"Listing '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv'...\n"}
+[2.447230] (task3) StdoutLine: {'line': b"Compiling '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/__init__.py'...\n"}
+[2.447262] (task3) StdoutLine: {'line': b"Compiling '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/_prime_factors.py'...\n"}
+[2.450619] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.450768] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.450882] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.451055] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.451156] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.451328] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.451385] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_generator_py.so\n'}
+[2.451538] (task3) StdoutLine: {'line': b'-- Set runtime path of "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_generator_py.so" to ""\n'}
+[2.451608] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/rust_packages/task3\n'}
+[2.451668] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust\n'}
+[2.451718] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/Cargo.toml\n'}
+[2.451764] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src\n'}
+[2.451811] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/lib.rs\n'}
+[2.451858] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/srv\n'}
+[2.451909] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/srv/rmw.rs\n'}
+[2.451956] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/srv.rs\n'}
+[2.452002] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/build.rs\n'}
+[2.452064] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors.idl\n'}
+[2.452129] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors.srv\n'}
+[2.452191] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors_Request.msg\n'}
+[2.452251] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors_Response.msg\n'}
+[2.452308] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/launch\n'}
+[2.452352] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/launch/Task3.launch.py\n'}
+[2.452434] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3A.py\n'}
+[2.452500] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/BonusTask3A.py\n'}
+[2.452552] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3B.py\n'}
+[2.452601] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3C.py\n'}
+[2.452658] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3D_server.py\n'}
+[2.452708] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3D_client.py\n'}
+[2.452802] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/package_run_dependencies/task3\n'}
+[2.452899] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/parent_prefix_path/task3\n'}
+[2.453010] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/ament_prefix_path.sh\n'}
+[2.453086] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/ament_prefix_path.dsv\n'}
+[2.453155] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/path.sh\n'}
+[2.453220] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/path.dsv\n'}
+[2.453284] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.bash\n'}
+[2.453347] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.sh\n'}
+[2.453409] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.zsh\n'}
+[2.453469] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.dsv\n'}
+[2.453527] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/package.dsv\n'}
+[2.453637] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/packages/task3\n'}
+[2.453735] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cExport.cmake\n'}
+[2.453802] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.453878] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.453952] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.454022] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.454088] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.454154] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cExport.cmake\n'}
+[2.454217] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.454285] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cppExport.cmake\n'}
+[2.454353] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.454418] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.454487] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.454551] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.454619] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cppExport.cmake\n'}
+[2.454682] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.454750] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_pyExport.cmake\n'}
+[2.454815] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.454885] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake-extras.cmake\n'}
+[2.454947] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.455012] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.455078] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.455140] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.455201] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.455266] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.455327] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3Config.cmake\n'}
+[2.455378] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3Config-version.cmake\n'}
+[2.455439] (task3) StdoutLine: {'line': b'-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/package.xml\n'}
+[2.457119] (task3) CommandEnded: {'returncode': 0}
+[2.473879] (task3) JobEnded: {'identifier': 'task3', 'rc': 0}
+[2.474265] (-) EventReactorShutdown: {}

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from task3/srv/PrimeFactors.srv
+// generated code does not contain a copyright notice
+
+
+module task3 {
+  module srv {
+    @verbatim (language="comment", text=
+      "Define request fields")
+    struct PrimeFactors_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "Define response fields")
+    struct PrimeFactors_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

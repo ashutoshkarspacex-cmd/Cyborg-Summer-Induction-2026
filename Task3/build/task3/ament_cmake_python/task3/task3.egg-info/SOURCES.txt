@@ -1,0 +1,6 @@
+setup.py
+task3/__init__.py
+task3.egg-info/PKG-INFO
+task3.egg-info/SOURCES.txt
+task3.egg-info/dependency_links.txt
+task3.egg-info/top_level.txt
