@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libtask3__rosidl_typesupport_fastrtps_c.so"
+			"path" : "libtask3__rosidl_typesupport_c.so"
 		}
 	],
 	"backtrace" : 5,
@@ -14,22 +14,25 @@
 			"include",
 			"ament_execute_extensions",
 			"rosidl_generate_interfaces",
+			"_install",
+			"ament_cmake_symlink_install_targets",
 			"install",
 			"target_link_libraries",
-			"target_compile_options",
+			"set_target_properties",
 			"add_definitions",
-			"find_package",
-			"target_include_directories",
-			"set_target_properties"
+			"find_package"
 		],
 		"files" : 
 		[
-			"/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake",
+			"/opt/ros/humble/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c_generate_interfaces.cmake",
 			"/opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
 			"/opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake",
 			"CMakeLists.txt",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/install.cmake",
 			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
-			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake"
+			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake",
+			"/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake"
 		],
 		"nodes" : 
 		[
@@ -61,69 +64,85 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 104,
-				"parent" : 4
-			},
-			{
-				"command" : 4,
-				"file" : 0,
-				"line" : 167,
-				"parent" : 4
-			},
-			{
-				"command" : 5,
-				"file" : 0,
-				"line" : 115,
-				"parent" : 4
-			},
-			{
-				"command" : 5,
-				"file" : 0,
-				"line" : 131,
+				"line" : 90,
 				"parent" : 4
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 128,
+				"line" : 141,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 37,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 50,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 120,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 123,
 				"parent" : 4
 			},
 			{
 				"command" : 8,
 				"file" : 0,
-				"line" : 21,
+				"line" : 103,
 				"parent" : 4
-			},
-			{
-				"file" : 5,
-				"parent" : 10
 			},
 			{
 				"command" : 1,
-				"file" : 5,
-				"line" : 41,
-				"parent" : 11
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
 			},
 			{
-				"file" : 4,
+				"file" : 8,
 				"parent" : 12
 			},
 			{
-				"command" : 7,
-				"file" : 4,
-				"line" : 25,
+				"command" : 10,
+				"file" : 8,
+				"line" : 21,
 				"parent" : 13
 			},
 			{
-				"command" : 9,
-				"file" : 0,
-				"line" : 134,
-				"parent" : 4
+				"file" : 7,
+				"parent" : 14
 			},
 			{
-				"command" : 10,
+				"command" : 1,
+				"file" : 7,
+				"line" : 41,
+				"parent" : 15
+			},
+			{
+				"file" : 6,
+				"parent" : 16
+			},
+			{
+				"command" : 9,
+				"file" : 6,
+				"line" : 25,
+				"parent" : 17
+			},
+			{
+				"command" : 8,
 				"file" : 0,
-				"line" : 110,
+				"line" : 100,
 				"parent" : 4
 			}
 		]
@@ -137,16 +156,8 @@
 					"fragment" : "-fPIC"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 11,
 					"fragment" : "-Wall"
-				},
-				{
-					"backtrace" : 9,
-					"fragment" : "-Wextra"
-				},
-				{
-					"backtrace" : 9,
-					"fragment" : "-Wpedantic"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -155,70 +166,42 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 7,
-					"define" : "FASTCDR_DYN_LINK"
-				},
-				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
 				},
 				{
-					"define" : "ROSIDL_TYPESUPPORT_FASTRTPS_C_BUILDING_DLL_task3"
+					"define" : "ROSIDL_GENERATOR_C_BUILDING_DLL_task3"
 				},
 				{
-					"backtrace" : 14,
+					"backtrace" : 18,
 					"define" : "ROS_PACKAGE_NAME=\"task3\""
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 15,
-					"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_fastrtps_c"
-				},
-				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_c"
 				},
 				{
-					"backtrace" : 7,
-					"isSystem" : true,
-					"path" : "/opt/ros/humble/include/fastcdr"
-				},
-				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_runtime_c"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcutils"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_interface"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"isSystem" : true,
-					"path" : "/opt/ros/humble/include/rosidl_runtime_cpp"
-				},
-				{
-					"backtrace" : 7,
-					"isSystem" : true,
-					"path" : "/opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp"
-				},
-				{
-					"backtrace" : 7,
-					"isSystem" : true,
-					"path" : "/opt/ros/humble/include/rmw"
-				},
-				{
-					"backtrace" : 7,
-					"isSystem" : true,
-					"path" : "/opt/ros/humble/include/rosidl_typesupport_fastrtps_c"
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_c"
 				}
 			],
 			"language" : "CXX",
@@ -226,34 +209,34 @@
 			{
 				"backtraces" : 
 				[
-					16
+					19
 				],
 				"standard" : "14"
 			},
 			"sourceIndexes" : 
 			[
-				1
+				0
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 8,
+			"backtrace" : 9,
 			"id" : "task3__rosidl_generator_c::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "task3__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+	"id" : "task3__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
 	"install" : 
 	{
 		"destinations" : 
 		[
 			{
-				"backtrace" : 6,
+				"backtrace" : 8,
 				"path" : "lib"
 			},
 			{
-				"backtrace" : 6,
+				"backtrace" : 8,
 				"path" : "lib"
 			}
 		],
@@ -271,35 +254,21 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/opt/ros/humble/lib:/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3:",
+				"fragment" : "-Wl,-rpath,/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3:/opt/ros/humble/lib:",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 7,
-				"fragment" : "/opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 7,
-				"fragment" : "/opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 8,
+				"backtrace" : 9,
 				"fragment" : "libtask3__rosidl_generator_c.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 7,
-				"fragment" : "/opt/ros/humble/lib/libfastcdr.so.1.0.29",
+				"backtrace" : 10,
+				"fragment" : "/opt/ros/humble/lib/librosidl_typesupport_c.so",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/opt/ros/humble/lib/librmw.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 7,
+				"backtrace" : 10,
 				"fragment" : "/opt/ros/humble/lib/librosidl_runtime_c.so",
 				"role" : "libraries"
 			},
@@ -314,12 +283,16 @@
 			{
 				"fragment" : "-latomic",
 				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Wl,-rpath-link,/opt/ros/humble/lib",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "task3__rosidl_typesupport_fastrtps_c",
-	"nameOnDisk" : "libtask3__rosidl_typesupport_fastrtps_c.so",
+	"name" : "task3__rosidl_typesupport_c",
+	"nameOnDisk" : "libtask3__rosidl_typesupport_c.so",
 	"paths" : 
 	{
 		"build" : ".",
@@ -328,24 +301,17 @@
 	"sourceGroups" : 
 	[
 		{
-			"name" : "Header Files",
+			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
 				0
 			]
 		},
 		{
-			"name" : "Source Files",
-			"sourceIndexes" : 
-			[
-				1
-			]
-		},
-		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				2
+				1
 			]
 		}
 	],
@@ -353,22 +319,16 @@
 	[
 		{
 			"backtrace" : 5,
-			"isGenerated" : true,
-			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_fastrtps_c/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_c.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_fastrtps_c/task3/srv/detail/prime_factors__type_support_c.cpp",
-			"sourceGroupIndex" : 1
+			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_c/task3/srv/prime_factors__type_support.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_fastrtps_c/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_c.h.rule",
-			"sourceGroupIndex" : 2
+			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_c/task3/srv/prime_factors__type_support.cpp.rule",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "SHARED_LIBRARY"

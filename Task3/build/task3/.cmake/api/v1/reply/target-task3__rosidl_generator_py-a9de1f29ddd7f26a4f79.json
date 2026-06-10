@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "rosidl_generator_py/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
+			"path" : "rosidl_generator_py/task3/libtask3__rosidl_generator_py.so"
 		}
 	],
 	"backtrace" : 5,
@@ -14,12 +14,13 @@
 			"include",
 			"ament_execute_extensions",
 			"rosidl_generate_interfaces",
+			"_install",
+			"ament_cmake_symlink_install_targets",
 			"install",
 			"target_link_libraries",
-			"ament_target_dependencies",
 			"add_dependencies",
 			"set_target_properties",
-			"set_properties",
+			"set_lib_properties",
 			"add_definitions",
 			"find_package",
 			"target_include_directories"
@@ -30,7 +31,8 @@
 			"/opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
 			"/opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake",
 			"CMakeLists.txt",
-			"/opt/ros/humble/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/install.cmake",
 			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
 			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake",
 			"/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake"
@@ -65,61 +67,61 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 226,
+				"line" : 166,
 				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 302,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 37,
+				"parent" : 6
 			},
 			{
 				"command" : 4,
-				"file" : 0,
-				"line" : 282,
-				"parent" : 4
-			},
-			{
-				"command" : 5,
-				"file" : 0,
-				"line" : 246,
-				"parent" : 4
-			},
-			{
-				"command" : 6,
-				"file" : 0,
-				"line" : 262,
-				"parent" : 4
-			},
-			{
-				"command" : 5,
 				"file" : 4,
-				"line" : 145,
-				"parent" : 8
-			},
-			{
-				"command" : 6,
-				"file" : 0,
-				"line" : 276,
-				"parent" : 4
-			},
-			{
-				"command" : 5,
-				"file" : 4,
-				"line" : 151,
-				"parent" : 10
+				"line" : 50,
+				"parent" : 7
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 229,
+				"line" : 175,
 				"parent" : 4
 			},
 			{
-				"command" : 9,
+				"command" : 7,
 				"file" : 0,
-				"line" : 239,
+				"line" : 213,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 167,
 				"parent" : 4
 			},
 			{
 				"command" : 8,
 				"file" : 0,
-				"line" : 146,
+				"line" : 169,
+				"parent" : 4
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 294,
+				"parent" : 4
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 156,
 				"parent" : 13
 			},
 			{
@@ -129,52 +131,40 @@
 				"parent" : 2
 			},
 			{
-				"file" : 7,
+				"file" : 8,
 				"parent" : 15
 			},
 			{
-				"command" : 11,
-				"file" : 7,
+				"command" : 12,
+				"file" : 8,
 				"line" : 21,
 				"parent" : 16
 			},
 			{
-				"file" : 6,
+				"file" : 7,
 				"parent" : 17
 			},
 			{
 				"command" : 1,
-				"file" : 6,
+				"file" : 7,
 				"line" : 41,
 				"parent" : 18
 			},
 			{
-				"file" : 5,
+				"file" : 6,
 				"parent" : 19
 			},
 			{
-				"command" : 10,
-				"file" : 5,
+				"command" : 11,
+				"file" : 6,
 				"line" : 25,
 				"parent" : 20
 			},
 			{
-				"command" : 12,
+				"command" : 13,
 				"file" : 0,
-				"line" : 253,
+				"line" : 179,
 				"parent" : 4
-			},
-			{
-				"command" : 12,
-				"file" : 4,
-				"line" : 147,
-				"parent" : 10
-			},
-			{
-				"command" : 12,
-				"file" : 4,
-				"line" : 141,
-				"parent" : 8
 			}
 		]
 	},
@@ -198,7 +188,7 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 11,
 					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
 				},
 				{
@@ -206,7 +196,7 @@
 					"define" : "ROS_PACKAGE_NAME=\"task3\""
 				},
 				{
-					"define" : "task3__rosidl_typesupport_c__pyext_EXPORTS"
+					"define" : "task3__rosidl_generator_py_EXPORTS"
 				}
 			],
 			"includes" : 
@@ -224,28 +214,19 @@
 					"path" : "/usr/include/python3.10"
 				},
 				{
-					"backtrace" : 23,
-					"path" : "/opt/ros/humble/include/rmw"
-				},
-				{
-					"backtrace" : 24,
+					"backtrace" : 11,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_runtime_c"
 				},
 				{
-					"backtrace" : 24,
-					"isSystem" : true,
-					"path" : "/opt/ros/humble/include/rosidl_typesupport_c"
-				},
-				{
-					"backtrace" : 24,
-					"isSystem" : true,
-					"path" : "/opt/ros/humble/include/rosidl_typesupport_interface"
-				},
-				{
-					"backtrace" : 7,
+					"backtrace" : 11,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcutils"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_interface"
 				}
 			],
 			"language" : "C",
@@ -262,30 +243,26 @@
 			"id" : "task3__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
 		},
 		{
+			"backtrace" : 11,
+			"id" : "task3__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 12,
 			"id" : "task3__py::@479021fe83804f209ec7"
-		},
-		{
-			"backtrace" : 7,
-			"id" : "task3__rosidl_generator_py::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 7,
-			"id" : "task3__rosidl_generator_c::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "task3__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+	"id" : "task3__rosidl_generator_py::@6890427a1f51a3e7e1df",
 	"install" : 
 	{
 		"destinations" : 
 		[
 			{
-				"backtrace" : 6,
-				"path" : "local/lib/python3.10/dist-packages/task3"
+				"backtrace" : 8,
+				"path" : "lib"
 			},
 			{
-				"backtrace" : 6,
-				"path" : "local/lib/python3.10/dist-packages/task3"
+				"backtrace" : 8,
+				"path" : "lib"
 			}
 		],
 		"prefix" : 
@@ -302,45 +279,29 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3:/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3:/opt/ros/humble/lib:",
+				"fragment" : "-Wl,-rpath,/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3:/opt/ros/humble/lib:",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 7,
-				"fragment" : "rosidl_generator_py/task3/libtask3__rosidl_generator_py.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 7,
+				"backtrace" : 9,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libpython3.10.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 7,
+				"backtrace" : 10,
 				"fragment" : "libtask3__rosidl_typesupport_c.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 9,
-				"fragment" : "/opt/ros/humble/lib/librosidl_typesupport_c.so",
-				"role" : "libraries"
-			},
-			{
 				"backtrace" : 11,
-				"fragment" : "/opt/ros/humble/lib/librmw.so",
-				"role" : "libraries"
-			},
-			{
 				"fragment" : "libtask3__rosidl_generator_c.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 9,
 				"fragment" : "/opt/ros/humble/lib/librosidl_runtime_c.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 11,
 				"fragment" : "/opt/ros/humble/lib/librcutils.so",
 				"role" : "libraries"
 			},
@@ -359,8 +320,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "task3__rosidl_typesupport_c__pyext",
-	"nameOnDisk" : "task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so",
+	"name" : "task3__rosidl_generator_py",
+	"nameOnDisk" : "libtask3__rosidl_generator_py.so",
 	"paths" : 
 	{
 		"build" : ".",
@@ -382,7 +343,7 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3/_task3_s.ep.rosidl_typesupport_c.c",
+			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3/srv/_prime_factors_s.c",
 			"sourceGroupIndex" : 0
 		}
 	],

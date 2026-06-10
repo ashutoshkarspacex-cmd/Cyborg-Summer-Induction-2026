@@ -61,13 +61,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 122,
+				"line" : 106,
 				"parent" : 6
 			}
 		]
 	},
-	"id" : "ament_cmake_python_copy_task3::@6890427a1f51a3e7e1df",
-	"name" : "ament_cmake_python_copy_task3",
+	"id" : "ament_cmake_python_symlink_task3::@6890427a1f51a3e7e1df",
+	"name" : "ament_cmake_python_symlink_task3",
 	"paths" : 
 	{
 		"build" : ".",
@@ -95,13 +95,13 @@
 		{
 			"backtrace" : 7,
 			"isGenerated" : true,
-			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles/ament_cmake_python_copy_task3",
+			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles/ament_cmake_python_symlink_task3",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles/ament_cmake_python_copy_task3.rule",
+			"path" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles/ament_cmake_python_symlink_task3.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -315,17 +315,17 @@ task3__rosidl_typesupport_cpp/fast:
 .PHONY : task3__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_task3
+# Target rules for targets named ament_cmake_python_symlink_task3
 
 # Build rule for target.
-ament_cmake_python_copy_task3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_task3
-.PHONY : ament_cmake_python_copy_task3
+ament_cmake_python_symlink_task3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_task3
+.PHONY : ament_cmake_python_symlink_task3
 
 # fast build rule for target.
-ament_cmake_python_copy_task3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_task3.dir/build.make CMakeFiles/ament_cmake_python_copy_task3.dir/build
-.PHONY : ament_cmake_python_copy_task3/fast
+ament_cmake_python_symlink_task3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_task3.dir/build.make CMakeFiles/ament_cmake_python_symlink_task3.dir/build
+.PHONY : ament_cmake_python_symlink_task3/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_task3_egg
@@ -696,7 +696,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_task3_egg"
-	@echo "... ament_cmake_python_copy_task3"
+	@echo "... ament_cmake_python_symlink_task3"
 	@echo "... task3"
 	@echo "... task3__cpp"
 	@echo "... task3__py"

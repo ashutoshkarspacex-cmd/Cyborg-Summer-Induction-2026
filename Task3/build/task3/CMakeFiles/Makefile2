@@ -97,7 +97,7 @@ clean: CMakeFiles/task3__cpp.dir/clean
 clean: CMakeFiles/task3__rosidl_typesupport_fastrtps_cpp.dir/clean
 clean: CMakeFiles/task3__rosidl_typesupport_introspection_cpp.dir/clean
 clean: CMakeFiles/task3__rosidl_typesupport_cpp.dir/clean
-clean: CMakeFiles/ament_cmake_python_copy_task3.dir/clean
+clean: CMakeFiles/ament_cmake_python_symlink_task3.dir/clean
 clean: CMakeFiles/ament_cmake_python_build_task3_egg.dir/clean
 clean: CMakeFiles/task3__rosidl_generator_py.dir/clean
 clean: CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/clean
@@ -193,15 +193,15 @@ CMakeFiles/task3_uninstall.dir/clean:
 # Target rules for target CMakeFiles/task3.dir
 
 # All Build rule for target.
-CMakeFiles/task3.dir/all: CMakeFiles/task3__cpp.dir/all
-CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_introspection_cpp.dir/all
-CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
 CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_fastrtps_c.dir/all
-CMakeFiles/task3.dir/all: task3__rs/CMakeFiles/task3__rs.dir/all
+CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
 CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_cpp.dir/all
-CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_fastrtps_cpp.dir/all
 CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_introspection_c.dir/all
+CMakeFiles/task3.dir/all: CMakeFiles/task3__cpp.dir/all
+CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_fastrtps_cpp.dir/all
+CMakeFiles/task3.dir/all: task3__rs/CMakeFiles/task3__rs.dir/all
 CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_generator_c.dir/all
+CMakeFiles/task3.dir/all: CMakeFiles/task3__rosidl_typesupport_introspection_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num= "Built target task3"
@@ -432,36 +432,36 @@ CMakeFiles/task3__rosidl_typesupport_cpp.dir/clean:
 .PHONY : CMakeFiles/task3__rosidl_typesupport_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ament_cmake_python_copy_task3.dir
+# Target rules for target CMakeFiles/ament_cmake_python_symlink_task3.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_copy_task3.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_task3.dir/build.make CMakeFiles/ament_cmake_python_copy_task3.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_task3.dir/build.make CMakeFiles/ament_cmake_python_copy_task3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_task3"
-.PHONY : CMakeFiles/ament_cmake_python_copy_task3.dir/all
+CMakeFiles/ament_cmake_python_symlink_task3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_task3.dir/build.make CMakeFiles/ament_cmake_python_symlink_task3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_task3.dir/build.make CMakeFiles/ament_cmake_python_symlink_task3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num= "Built target ament_cmake_python_symlink_task3"
+.PHONY : CMakeFiles/ament_cmake_python_symlink_task3.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ament_cmake_python_copy_task3.dir/rule: cmake_check_build_system
+CMakeFiles/ament_cmake_python_symlink_task3.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_copy_task3.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_symlink_task3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles 0
-.PHONY : CMakeFiles/ament_cmake_python_copy_task3.dir/rule
+.PHONY : CMakeFiles/ament_cmake_python_symlink_task3.dir/rule
 
 # Convenience name for target.
-ament_cmake_python_copy_task3: CMakeFiles/ament_cmake_python_copy_task3.dir/rule
-.PHONY : ament_cmake_python_copy_task3
+ament_cmake_python_symlink_task3: CMakeFiles/ament_cmake_python_symlink_task3.dir/rule
+.PHONY : ament_cmake_python_symlink_task3
 
 # clean rule for target.
-CMakeFiles/ament_cmake_python_copy_task3.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_task3.dir/build.make CMakeFiles/ament_cmake_python_copy_task3.dir/clean
-.PHONY : CMakeFiles/ament_cmake_python_copy_task3.dir/clean
+CMakeFiles/ament_cmake_python_symlink_task3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_task3.dir/build.make CMakeFiles/ament_cmake_python_symlink_task3.dir/clean
+.PHONY : CMakeFiles/ament_cmake_python_symlink_task3.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ament_cmake_python_build_task3_egg.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_build_task3_egg.dir/all: CMakeFiles/ament_cmake_python_copy_task3.dir/all
+CMakeFiles/ament_cmake_python_build_task3_egg.dir/all: CMakeFiles/ament_cmake_python_symlink_task3.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_task3_egg.dir/build.make CMakeFiles/ament_cmake_python_build_task3_egg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_task3_egg.dir/build.make CMakeFiles/ament_cmake_python_build_task3_egg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num= "Built target ament_cmake_python_build_task3_egg"
@@ -488,8 +488,8 @@ CMakeFiles/ament_cmake_python_build_task3_egg.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/task3__rosidl_generator_py.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
-CMakeFiles/task3__rosidl_generator_py.dir/all: task3__py/CMakeFiles/task3__py.dir/all
 CMakeFiles/task3__rosidl_generator_py.dir/all: CMakeFiles/task3__rosidl_generator_c.dir/all
+CMakeFiles/task3__rosidl_generator_py.dir/all: task3__py/CMakeFiles/task3__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_generator_py.dir/build.make CMakeFiles/task3__rosidl_generator_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_generator_py.dir/build.make CMakeFiles/task3__rosidl_generator_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num=6,7 "Built target task3__rosidl_generator_py"
@@ -515,11 +515,11 @@ CMakeFiles/task3__rosidl_generator_py.dir/clean:
 # Target rules for target CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir
 
 # All Build rule for target.
-CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
 CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_fastrtps_c.dir/all
-CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/all: task3__py/CMakeFiles/task3__py.dir/all
 CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/task3__rosidl_generator_py.dir/all
+CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
 CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/task3__rosidl_generator_c.dir/all
+CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/all: task3__py/CMakeFiles/task3__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num=19,20 "Built target task3__rosidl_typesupport_fastrtps_c__pyext"
@@ -545,11 +545,11 @@ CMakeFiles/task3__rosidl_typesupport_fastrtps_c__pyext.dir/clean:
 # Target rules for target CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir
 
 # All Build rule for target.
-CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
-CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: task3__py/CMakeFiles/task3__py.dir/all
-CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_introspection_c.dir/all
 CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/task3__rosidl_generator_py.dir/all
+CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
+CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_introspection_c.dir/all
 CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/task3__rosidl_generator_c.dir/all
+CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/all: task3__py/CMakeFiles/task3__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num=27,28 "Built target task3__rosidl_typesupport_introspection_c__pyext"
@@ -575,10 +575,10 @@ CMakeFiles/task3__rosidl_typesupport_introspection_c__pyext.dir/clean:
 # Target rules for target CMakeFiles/task3__rosidl_typesupport_c__pyext.dir
 
 # All Build rule for target.
-CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
-CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/all: task3__py/CMakeFiles/task3__py.dir/all
 CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/task3__rosidl_generator_py.dir/all
+CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/task3__rosidl_typesupport_c.dir/all
 CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/task3__rosidl_generator_c.dir/all
+CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/all: task3__py/CMakeFiles/task3__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/task3__rosidl_typesupport_c__pyext.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles --progress-num=11,12 "Built target task3__rosidl_typesupport_c__pyext"

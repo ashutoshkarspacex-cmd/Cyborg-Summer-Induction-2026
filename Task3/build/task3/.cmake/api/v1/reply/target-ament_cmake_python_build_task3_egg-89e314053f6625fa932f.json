@@ -69,7 +69,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ament_cmake_python_copy_task3::@6890427a1f51a3e7e1df"
+			"id" : "ament_cmake_python_symlink_task3::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "ament_cmake_python_build_task3_egg::@6890427a1f51a3e7e1df",
