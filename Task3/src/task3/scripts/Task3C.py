@@ -180,23 +180,26 @@ class Task3C(Node):
         # ==================================
         # STUDENT SECTION
         # ==================================
+        # Implement police logic to catch the thief
+        police_cmd = Twist()
+        
+        dist_x=self.thief_pose.x-self.police_pose.x
+        dist_y=self.thief_pose.y-self.police_pose.y
+        thief_to_police_distance=math.sqrt(dist_x**2+dist_y**2)
+        angular_to_thief=math.atan2(dist_y,dist_x)
+        angle_diff=angular_to_thief-self.police_pose.theta
+        heading_error=math.atan2(math.sin(angle_diff),math.cos(angle_diff))
+        police_cmd.angular.z=6.0*heading_error
+        police_cmd.linear.x=4.0 if abs(heading_error)<0.4 else 0.0
+        if thief_to_police_distance<=0.5:
+            police_cmd.linear.x=0.0
+            police_cmd.angular.z=0.0
+            self.get_logger().info("Thief caught! Mission Successful.")
+            self.timer.destroy()
+        self.police_pub.publish(police_cmd)
 
-        #
-        # Objective:
-        # Catch turtle1
-        #
-        # Available:
-        # self.thief_pose
-        # self.police_pose
-        # self.police_pub
-        #
-        # Publish velocity commands
-        # using self.police_pub
-        #
-        # Do not modify thief logic.
-        #
-
-        pass
+        
+        
 
 
 def main(args=None):

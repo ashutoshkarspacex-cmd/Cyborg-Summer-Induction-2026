@@ -1,38 +1,46 @@
 #!/usr/bin/env python3
-
-#Write your implementation
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 import math
 
-class Task3A(Node):
-
+class InfinityPathTracer(Node):
     def __init__(self):
+        super().__init__('infinity_path_tracer')
+        self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+        
+        self.time = self.create_timer(0.05, self.timer_callback)
+        self.t = -math.pi
+        self.get_logger().info('Infinity Path Tracer Node has been started.')
 
-        super().__init__('infinity_tracker')
-        self.cmv_vel_pub_=self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-        self.create_timer(0.5, self.set_velocity) 
-        self.get_logger().info('Draw Infinity node has been started....')
-        self.counter=0.0
-    def set_velocity(self):
-           msg=Twist()
-           msg.linear.x=1.5
-           msg.angular.z=1.5*math.sin(self.counter)
-           self.cmv_vel_pub_.publish(msg)
-           self.counter+=0.5
+    def timer_callback(self):
+        msg = Twist()
+        if self.t <=math.pi:  
+            msg.linear.x = 2.0
+            msg.angular.z = 2.5 * math.sin(self.t)
+            self.publisher_.publish(msg)
+           
+            self.t += 0.05
+        else:
+            msg.linear.x = 0.0
+            msg.angular.z = 0.0
+            self.publisher_.publish(msg)
+            
+            self.get_logger().info('Completed one full infinity loop successfully. Stopping.')
+    
+            self.time.destroy()
+            
 
 def main(args=None):
     rclpy.init(args=args)
-    node=Task3A()
+    node = InfinityPathTracer()
+   
     rclpy.spin(node)
-    rclpy.shutdown()           
+    node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
-
-
 
 
         

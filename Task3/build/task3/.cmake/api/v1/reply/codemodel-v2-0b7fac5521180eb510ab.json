@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-97e9f7a0f8102847358e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "task3__py",
+					"jsonFile" : "directory-task3__py-32bda877b6c7670a1689.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/task3__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "task3__rs",
+					"jsonFile" : "directory-task3__rs-7776ebd3b418f5539296.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/task3__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "task3",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_task3_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_task3_egg-126565e9d4c0d4bbac8e.json",
+					"name" : "ament_cmake_python_build_task3_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_task3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_task3-c485baeaec754349eb1b.json",
+					"name" : "ament_cmake_python_copy_task3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3-4096712bd7f94fc35060.json",
+					"name" : "task3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__cpp-e08b5509504de8ab45fd.json",
+					"name" : "task3__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "task3__py::@479021fe83804f209ec7",
+					"jsonFile" : "target-task3__py-c4bd3f1e27abbbee246a.json",
+					"name" : "task3__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_generator_c-d9f13970e27c0d974914.json",
+					"name" : "task3__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_generator_py-3ccafe027d0623aeefb9.json",
+					"name" : "task3__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_c-6c84ca8356618ff6d269.json",
+					"name" : "task3__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_c__pyext-f4f7021f2cb13aec4678.json",
+					"name" : "task3__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_cpp-715f1ce4cb9b55f577d8.json",
+					"name" : "task3__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_fastrtps_c-ca13398bfc9057a19cea.json",
+					"name" : "task3__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_fastrtps_c__pyext-fe3d44576d41f1a95f5e.json",
+					"name" : "task3__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_fastrtps_cpp-fd451a9ae208d7c00814.json",
+					"name" : "task3__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_introspection_c-614e68b46c153cd6f814.json",
+					"name" : "task3__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_introspection_c__pyext-87725615d2a76a4ce70a.json",
+					"name" : "task3__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3__rosidl_typesupport_introspection_cpp-0b0c9b97a7a02ed7b835.json",
+					"name" : "task3__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "task3__rs::@2ca534ccd8d0bc672937",
+					"jsonFile" : "target-task3__rs-dc3ad449fe171458ee7f.json",
+					"name" : "task3__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3_uninstall-5e94a49e94589056548a.json",
+					"name" : "task3_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-690799e2c542b339076e.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3",
+		"source" : "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

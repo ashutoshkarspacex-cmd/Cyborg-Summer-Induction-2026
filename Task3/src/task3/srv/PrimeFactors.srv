@@ -1,3 +1,7 @@
 # Define request fields
+#Request: A single positive integer
+int64 number
 ---
 # Define response fields
+#Response: An array of its prime factors
+int64[] prime_factors

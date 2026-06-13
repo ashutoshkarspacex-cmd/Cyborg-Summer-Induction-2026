@@ -43,7 +43,19 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/task3")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/task3/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_c/task3/" REGEX "/[^/]*\\.h$")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/library_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -70,6 +82,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/task3/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_fastrtps_c/task3/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtask3__rosidl_typesupport_fastrtps_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtask3__rosidl_typesupport_fastrtps_c.so")
     file(RPATH_CHECK
@@ -90,6 +106,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/task3/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_introspection_c/task3/" REGEX "/[^/]*\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -139,6 +159,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/task3/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_cpp/task3/" REGEX "/[^/]*\\.hpp$")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/task3/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_fastrtps_cpp/task3/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtask3__rosidl_typesupport_fastrtps_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtask3__rosidl_typesupport_fastrtps_cpp.so")
     file(RPATH_CHECK
@@ -159,6 +187,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/task3/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_typesupport_introspection_cpp/task3/" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -208,11 +240,96 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/pythonpath.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/pythonpath.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_python/task3/task3.egg-info/")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
         "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3"
       )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3" TYPE SHARED_LIBRARY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
+         OLD_RPATH "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3:/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3:/opt/ros/humble/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3" TYPE SHARED_LIBRARY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
+         OLD_RPATH "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3:/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3:/opt/ros/humble/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3" TYPE SHARED_LIBRARY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
+         OLD_RPATH "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3:/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3:/opt/ros/humble/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -236,6 +353,93 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rust_packages" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_index/share/ament_index/resource_index/rust_packages/task3")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_rs/task3/rust")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/srv" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_adapter/task3/srv/PrimeFactors.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/srv" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/srv/PrimeFactors.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/srv" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_cmake/srv/PrimeFactors_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/srv" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_cmake/srv/PrimeFactors_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE DIRECTORY FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/launch")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/task3" TYPE PROGRAM FILES
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/Task3A.py"
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/BonusTask3A.py"
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/Task3B.py"
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/Task3C.py"
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/Task3D_server.py"
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/Task3D_client.py"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/task3")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/task3")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/environment" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_index/share/ament_index/resource_index/packages/task3")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -404,6 +608,45 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
     file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/CMakeFiles/Export/share/task3/cmake/export_task3__rosidl_generator_pyExport-noconfig.cmake")
   endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_cmake/rosidl_cmake-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3/cmake" TYPE FILE FILES
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_core/task3Config.cmake"
+    "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/ament_cmake_core/task3Config-version.cmake"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/task3" TYPE FILE FILES "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

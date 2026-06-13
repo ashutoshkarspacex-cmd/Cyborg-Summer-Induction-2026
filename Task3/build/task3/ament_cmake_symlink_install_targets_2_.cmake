@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/build/task3/rosidl_generator_py/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "task3__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/task3")

@@ -4,3 +4,5 @@ task3.egg-info/PKG-INFO
 task3.egg-info/SOURCES.txt
 task3.egg-info/dependency_links.txt
 task3.egg-info/top_level.txt
+task3/srv/__init__.py
+task3/srv/_prime_factors.py

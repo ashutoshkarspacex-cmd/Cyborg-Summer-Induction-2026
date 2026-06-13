@@ -1,0 +1,165 @@
+[  9%] Built target task3__rs
+[  9%] Built target task3__cpp
+[ 15%] Built target task3__rosidl_generator_c
+[ 15%] Built target ament_cmake_python_copy_task3
+[ 25%] Built target task3__rosidl_typesupport_c
+[ 34%] Built target task3__rosidl_typesupport_introspection_c
+[ 43%] Built target task3__rosidl_typesupport_fastrtps_c
+[ 71%] Built target task3__rosidl_typesupport_introspection_cpp
+[ 71%] Built target task3__rosidl_typesupport_fastrtps_cpp
+[ 71%] Built target task3__rosidl_typesupport_cpp
+[ 71%] Built target task3
+[ 75%] Built target task3__py
+[ 81%] Built target task3__rosidl_generator_py
+[100%] Built target task3__rosidl_typesupport_c__pyext
+[100%] Built target task3__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target task3__rosidl_typesupport_introspection_c__pyext
+running egg_info
+writing task3.egg-info/PKG-INFO
+writing dependency_links to task3.egg-info/dependency_links.txt
+writing top-level names to task3.egg-info/top_level.txt
+reading manifest file 'task3.egg-info/SOURCES.txt'
+writing manifest file 'task3.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_task3_egg
+-- Install configuration: ""
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/rosidl_interfaces/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__functions.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__struct.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__functions.c
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/prime_factors.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_generator_c__visibility_control.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/library_path.sh
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/library_path.dsv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_generator_c.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.c
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_c.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/prime_factors.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__builder.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__struct.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__traits.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/dds_fastrtps
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_cpp.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.cpp
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_cpp.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_cpp.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/pythonpath.sh
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/pythonpath.dsv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info
+-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/__init__.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/_prime_factors_s.c
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv/_prime_factors.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/_task3_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/libtask3__rosidl_generator_py.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/_task3_s.ep.rosidl_typesupport_introspection_c.c
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/__init__.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/_task3_s.ep.rosidl_typesupport_c.c
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+Listing '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3'...
+Listing '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/srv'...
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/local/lib/python3.10/dist-packages/task3/task3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/libtask3__rosidl_generator_py.so
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/rust_packages/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/Cargo.toml
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/lib.rs
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/srv/rmw.rs
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/src/srv.rs
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/rust/build.rs
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors.idl
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors.srv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors_Request.msg
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/srv/PrimeFactors_Response.msg
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/launch
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/launch/Task3.launch.py
+-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3A.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/BonusTask3A.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3B.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3C.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3D_server.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/lib/task3/Task3D_client.py
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/package_run_dependencies/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/parent_prefix_path/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/ament_prefix_path.sh
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/path.sh
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/environment/path.dsv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.bash
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.sh
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.zsh
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/local_setup.dsv
+-- Installing: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/package.dsv
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/ament_index/resource_index/packages/task3
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cppExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cppExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cppExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cppExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_pyExport.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_pyExport-noconfig.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake-extras.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3Config.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/cmake/task3Config-version.cmake
+-- Up-to-date: /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/install/task3/share/task3/package.xml
