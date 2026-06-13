@@ -35,7 +35,7 @@ class server(Node):
           else:            
              self.counter=0  
 
-       response.factors = factors_list
+       response.factors = Prime_factors
        self.get_logger().info(f'Returning response factors: {Prime_factors}')
        return response    
 def main(args=None):
