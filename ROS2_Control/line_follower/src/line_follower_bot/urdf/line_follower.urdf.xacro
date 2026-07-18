@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="line_follower">
+
+<xacro:property
+    name="controllers_file"
+    value="$(find line_follower_bot)/config/controllers.yaml"/>
+  <!-- ================= Materials ================= -->
+
+  <material name="pink">
+    <color rgba="1.0 0.41 0.71 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0.15 0.15 0.15 1"/>
+  </material>
+
+  <material name="grey">
+    <color rgba="0.75 0.75 0.75 1"/>
+  </material>
+
+  <!-- ================= Base Link ================= -->
+
+  <link name="base_link">
+
+    <visual>
+      <origin xyz="0 0 0.025"/>
+      <geometry>
+        <box size="0.25 0.18 0.05"/>
+      </geometry>
+      <material name="pink"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.025"/>
+      <geometry>
+        <box size="0.25 0.18 0.05"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.025"/>
+      <mass value="2.0"/>
+      <inertia
+        ixx="0.010"
+        ixy="0"
+        ixz="0"
+        iyy="0.013"
+        iyz="0"
+        izz="0.020"/>
+    </inertial>
+
+  </link>
+
+  <!-- ================= LEFT WHEEL ================= -->
+
+<link name="left_wheel">
+
+  <visual>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder radius="0.04" length="0.025"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder radius="0.04" length="0.025"/>
+    </geometry>
+  </collision>
+
+  <inertial>
+    <origin xyz="0 0 0"/>
+    <mass value="0.15"/>
+    <inertia
+      ixx="8.0e-5"
+      ixy="0"
+      ixz="0"
+      iyy="8.0e-5"
+      iyz="0"
+      izz="1.6e-4"/>
+  </inertial>
+
+</link>
+
+<joint name="left_wheel_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="left_wheel"/>
+  <!-- Rear Left -->
+  <origin xyz="-0.085 0.105 0.02"/>
+  <axis xyz="0 1 0"/>
+</joint>
+  <!-- ================= RIGHT WHEEL ================= -->
+
+<link name="right_wheel">
+
+  <visual>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder radius="0.04" length="0.025"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder radius="0.04" length="0.025"/>
+    </geometry>
+  </collision>
+
+  <inertial>
+    <origin xyz="0 0 0"/>
+    <mass value="0.15"/>
+    <inertia
+      ixx="8.0e-5"
+      ixy="0"
+      ixz="0"
+      iyy="8.0e-5"
+      iyz="0"
+      izz="1.6e-4"/>
+  </inertial>
+
+</link>
+
+<joint name="right_wheel_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="right_wheel"/>
+  <!-- Rear Right -->
+  <origin xyz="-0.085 -0.105 0.02"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+ <!-- ================= FRONT CASTER ================= -->
+
+<link name="caster_wheel">
+
+  <visual>
+    <origin xyz="0 0 0"/>
+    <geometry>
+      <sphere radius="0.025"/>
+    </geometry>
+    <material name="grey"/>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0"/>
+    <geometry>
+      <sphere radius="0.025"/>
+    </geometry>
+  </collision>
+
+  <inertial>
+    <origin xyz="0 0 0"/>
+    <mass value="0.05"/>
+    <inertia
+      ixx="1.25e-5"
+      ixy="0"
+      ixz="0"
+      iyy="1.25e-5"
+      iyz="0"
+      izz="1.25e-5"/>
+  </inertial>
+
+</link>
+
+<joint name="caster_joint" type="fixed">
+  <parent link="base_link"/>
+  <child link="caster_wheel"/>
+  <!-- Front center -->
+  <origin xyz="0.100 0 0.0"/>
+</joint>
+
+  <!-- ================= CAMERA ================= -->
+
+  <link name="camera_link">
+
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.03 0.03 0.03"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="0.05"/>
+      <inertia
+        ixx="1e-5"
+        ixy="0"
+        ixz="0"
+        iyy="1e-5"
+        iyz="0"
+        izz="1e-5"/>
+    </inertial>
+
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <!-- Front top -->
+    <origin xyz="0.11 0 0.06" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ================= IMU ================= -->
+
+  <link name="imu_link">
+
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.01"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.02 0.02 0.01"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="0.02"/>
+      <inertia
+        ixx="5e-6"
+        ixy="0"
+        ixz="0"
+        iyy="5e-6"
+        iyz="0"
+        izz="5e-6"/>
+    </inertial>
+
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.055"/>
+  </joint>
+  <!-- ROS2 Control Block ; defines the hardware -->
+  <ros2_control name="GazeboSystem" type="system">
+
+  <hardware>
+    <plugin>ign_ros2_control/IgnitionSystem</plugin>
+  </hardware>
+
+  <joint name="left_wheel_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+  <joint name="right_wheel_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+</ros2_control>
+<!-- ROS2 Control PLugin -->
+<gazebo>
+ <plugin filename="libign_ros2_control-system.so" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+    <parameters>${controllers_file}</parameters>
+    <ros>
+      <remapping>/diff_drive_controller/cmd_vel_unstamped:=/cmd_vel</remapping>
+    </ros>
+  </plugin>
+</gazebo>
+
+</robot>
