@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/log/build_2026-06-12_21-12-00",
+      "program": "/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task3/src/task3/scripts/log/build_2026-06-12_21-12-00/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
