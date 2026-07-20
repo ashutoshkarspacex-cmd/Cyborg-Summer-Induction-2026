@@ -1,0 +1,9 @@
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/uninstall.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/task_arena_uninstall.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/test.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/edit_cache.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/rebuild_cache.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/list_install_components.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/install.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/install/local.dir
+/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/task_arena/CMakeFiles/install/strip.dir

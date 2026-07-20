@@ -1,0 +1,10 @@
+[console_scripts]
+feedback = bot_control.feedback:main
+go_to_goal = bot_control.go_to_goal:main
+move_ellipse = bot_control.move_ellipse:main
+move_spiral = bot_control.move_spiral:main
+odom_broadcaster = bot_control.odom_broadcaster:main
+trace_ground_truth = bot_control.trace_ground_truth:main
+trace_path_odom = bot_control.trace_path_odom:main
+visualization = bot_control.visualization:main
+

@@ -1,0 +1,4 @@
+source;share/task_arena/local_setup.bash
+source;share/task_arena/local_setup.dsv
+source;share/task_arena/local_setup.sh
+source;share/task_arena/local_setup.zsh

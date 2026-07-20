@@ -1,0 +1,29 @@
+running egg_info
+writing ../../build/bot_control/bot_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/bot_control/bot_control.egg-info/dependency_links.txt
+writing entry points to ../../build/bot_control/bot_control.egg-info/entry_points.txt
+writing requirements to ../../build/bot_control/bot_control.egg-info/requires.txt
+writing top-level names to ../../build/bot_control/bot_control.egg-info/top_level.txt
+reading manifest file '../../build/bot_control/bot_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/bot_control/bot_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying bot_control/feedback.py -> /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/bot_control/build/lib/bot_control
+running install
+running install_lib
+copying /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/bot_control/build/lib/bot_control/feedback.py -> /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/python3.10/site-packages/bot_control
+byte-compiling /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/python3.10/site-packages/bot_control/feedback.py to feedback.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/python3.10/site-packages/bot_control-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/bot_control/bot_control.egg-info to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/python3.10/site-packages/bot_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing feedback script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+Installing go_to_goal script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+Installing move_ellipse script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+Installing move_spiral script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+Installing odom_broadcaster script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+Installing trace_ground_truth script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+Installing trace_path_odom script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+Installing visualization script to /home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/install/bot_control/lib/bot_control
+writing list of installed files to '/home/the_wizard_of_nowhere/Cyborg-Summer-Induction-2026/Task5/build/bot_control/install.log'
