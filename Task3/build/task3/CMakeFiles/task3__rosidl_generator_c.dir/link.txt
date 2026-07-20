@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -shared -Wl,-soname,libtask3__rosidl_generator_c.so -o libtask3__rosidl_generator_c.so CMakeFiles/task3__rosidl_generator_c.dir/rosidl_generator_c/task3/srv/detail/prime_factors__functions.c.o  -Wl,-rpath,/opt/ros/humble/lib: /opt/ros/humble/lib/librosidl_runtime_c.so /opt/ros/humble/lib/librcutils.so -ldl -latomic 

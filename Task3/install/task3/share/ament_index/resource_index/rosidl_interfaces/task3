@@ -1,4 +1,0 @@
-srv/PrimeFactors.idl
-srv/PrimeFactors.srv
-srv/PrimeFactors_Request.msg
-srv/PrimeFactors_Response.msg

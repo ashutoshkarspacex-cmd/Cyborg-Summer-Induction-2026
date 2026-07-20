@@ -1,8 +1,0 @@
-source;share/task_arena/hook/cmake_prefix_path.ps1
-source;share/task_arena/hook/cmake_prefix_path.dsv
-source;share/task_arena/hook/cmake_prefix_path.sh
-source;share/task_arena/local_setup.bash
-source;share/task_arena/local_setup.dsv
-source;share/task_arena/local_setup.ps1
-source;share/task_arena/local_setup.sh
-source;share/task_arena/local_setup.zsh

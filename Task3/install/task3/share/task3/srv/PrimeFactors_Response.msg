@@ -1,2 +1,0 @@
-
-# Define response fields
